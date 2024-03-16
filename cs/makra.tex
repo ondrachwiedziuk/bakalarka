@@ -1,0 +1,140 @@
+%%% Tento soubor obsahuje definice různých užitečných maker a prostředí %%%
+%%% Další makra připisujte sem, ať nepřekáží v ostatních souborech.     %%%
+
+%%% Drobné úpravy stylu
+
+% Tato makra přesvědčují mírně ošklivým trikem LaTeX, aby hlavičky kapitol
+% sázel příčetněji a nevynechával nad nimi spoustu místa. Směle ignorujte.
+\makeatletter
+\def\@makechapterhead#1{
+  {\parindent \z@ \raggedright \normalfont
+   \Huge\bfseries \thechapter. #1
+   \par\nobreak
+   \vskip 20\p@
+}}
+\def\@makeschapterhead#1{
+  {\parindent \z@ \raggedright \normalfont
+   \Huge\bfseries #1
+   \par\nobreak
+   \vskip 20\p@
+}}
+\def\fps@figure{h}
+\makeatother
+
+% Citáty
+\renewenvironment{quote}
+               {\list{}{\rightmargin\leftmargin}%
+                \item\relax\center\itshape\textquotedblleft\ignorespaces}
+               {\unskip\unskip\textquotedblright\endlist}
+
+% Toto makro definuje kapitolu, která není očíslovaná, ale je uvedena v obsahu.
+\def\chapwithtoc#1{
+\chapter*{#1}
+\addcontentsline{toc}{chapter}{#1}
+}
+
+% Trochu volnější nastavení dělení slov, než je default.
+\lefthyphenmin=2
+\righthyphenmin=2
+
+% Zapne černé "slimáky" na koncích řádků, které přetekly, abychom si
+% jich lépe všimli.
+\overfullrule=1mm
+\let\OldRule\rule
+\renewcommand{\rule}[2]{\OldRule{\linewidth}{#2}}
+
+%%% Makra pro definice, věty, tvrzení, příklady, ... (vyžaduje baliček amsthm)
+
+\theoremstyle{plain}
+\newtheorem{veta}{Věta}
+\newtheorem{lemma}[veta]{Lemma}
+\newtheorem{tvrzeni}[veta]{Tvrzení}
+\newtheorem{fakt}[veta]{Fakt}
+\newtheorem{domnenka}[veta]{Domněnka}
+
+\theoremstyle{definition}
+\newtheorem{definice}{Definice}
+
+\theoremstyle{remark}
+\newtheorem*{dusledek}{Důsledek}
+\newtheorem*{pozn}{Poznámka}
+\newtheorem*{priklad}{Příklad}
+\newtheorem*{pozorovani}{Pozorování}
+
+%%% Prostředí pro důkazy
+
+\newenvironment{dukaz}{
+  \par\medskip\noindent
+  \textit{Důkaz}.
+}{
+\newline
+\rightline{$\qedsymbol$}
+}
+
+%%% Prostředí pro sazbu kódu, případně vstupu/výstupu počítačových
+%%% programů. (Vyžaduje balíček fancyvrb -- fancy verbatim.)
+
+\DefineVerbatimEnvironment{code}{Verbatim}{fontsize=\small, frame=single}
+
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.80,0.20,0.20}{\textbf{#1}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.67,0.33,0.00}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.88,0.69,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.80,0.00,0.00}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.99,0.00,0.69}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.00,0.40,0.80}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.00,0.53,0.27}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.00,0.53,0.27}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.33,0.33,0.33}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.20,0.40,0.80}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.88,0.69,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.80,0.00,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.40,0.00,0.60}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.80,0.20,0.20}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.80,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.20,0.40,0.80}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.20,0.40,0.80}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.33,0.33,0.33}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.20,0.40,0.80}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.33,0.33,0.33}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.33,0.33,0.33}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.00,0.53,0.27}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.53,0.27}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.59,0.00,0.09}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.59,0.00,0.09}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.53,0.27}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.00,0.53,0.27}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.80,0.20,0.20}{\textbf{\textit{#1}}}}
+
+%%% Prostor reálných, resp. přirozených čísel
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+
+%%% Užitečné operátory pro statistiku a pravděpodobnost
+\DeclareMathOperator{\pr}{\textsf{P}}
+\DeclareMathOperator{\E}{\textsf{E}\,}
+\DeclareMathOperator{\var}{\textrm{var}}
+\DeclareMathOperator{\sd}{\textrm{sd}}
+
+%%% Příkaz pro transpozici vektoru/matice
+\newcommand{\T}[1]{#1^\top}
+
+%%% Vychytávky pro matematiku
+\newcommand{\goto}{\rightarrow}
+\newcommand{\gotop}{\stackrel{P}{\longrightarrow}}
+\newcommand{\maon}[1]{o(n^{#1})}
+\newcommand{\abs}[1]{\left|{#1}\right|}
+\newcommand{\dint}{\int_0^\tau\!\!\int_0^\tau}
+\newcommand{\isqr}[1]{\frac{1}{\sqrt{#1}}}
+\newcommand{\quot}[2]{{^{\textstyle#1}\big/_{\textstyle#2}}}
+
+%%% Vychytávky pro tabulky
+\newcommand{\pulrad}[1]{\raisebox{1.5ex}[0pt]{#1}}
+\newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
