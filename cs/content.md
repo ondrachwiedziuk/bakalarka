@@ -234,7 +234,7 @@ Motivací je, že fundamentální quandle je úplný invariant, tedy plně chara
 ## Velikost barvení
 
 :::{.veta #omezeni}
-(Eisermannova věta).
+[@eisermann1999number].
 Buď $s(K)$ copánkový index uzlu $K$. Pak pokud invariant $v: \mathcal{K} \rightarrow \mathbb{C}$ splňuje, že $|v(K)| \leq f(s(K))$ pro nějakou funkci $f: \mathbb{N} \rightarrow \mathbb{N}$ a pro všechny uzly $K \in \mathcal{K}$, pak $v$ není Vassilievův invariant, nebo je konstantní.
 :::
 
@@ -254,33 +254,25 @@ Použitím věty @omezeni dostáváme, že $\text{Col}_Q(K)$ není Vassilievův 
 ## Triviální barvení
 
 :::definice
+Mějme quandle $Q$. Pak $L_q$ značí levou translaci o $q \in Q$, tedy $L_q(x) = q * x$. Grupa generovaná levými translacemi se značí $\text{Inn}(Q)$ a nazývá se *grupa vnitřních automorfismů* quandlu $Q$.
+:::
+
+:::definice
 Mějme quandle $Q$. Pokud platí, že je působení $\text{Inn}(Q)$ na $Q$ tranzitivní, pak říkáme, že $Q$ je souvislý quandle.
 :::
 
-:::tvrzeni
+:::{.tvrzeni #sofun}
+[@Joyce1982ACI].
 Mějme uzel $K$ a jeho fundamentální quandle $Q_K$. Pak platí, že $Q_K$ je souvislý quandle.
 :::
 
-:::{.lemma #rozklad}
-Mějme quandle $Q$ a grupu vnitřních automorfismů $\text{Inn}(Q)$. Pak platí, že působení $\text{Inn}(Q)$ na $Q$ rozkládá $Q$ na orbity a každá orbita je maximální souvislý podquandle.
+:::{.tvrzeni #rozklad}
+[@ehrman2006toward].
+Mějme quandle $Q$ a grupu vnitřních automorfismů $\text{Inn}(Q)$. Pak platí, že působení $\text{Inn}(Q)$ na $Q$ rozkládá $Q$ na orbity a každá orbita je souvislý podquandle.
 :::
 
 :::definice
 Mějme quandle $Q$. Pokud platí, že pro všechny orbity působení $\text{Inn}(Q)$ na $Q$ platí, že jejich velikost je rovná $1$, pak říkáme, že $Q$ je totálně nesouvislý quandle.
-:::
-
-:::{.lemma #hom}
-Uvažujme quandly $Q$ a $W$, na $Q$ rozklad na orbity ${Q_1, Q_2, \dots Q_n}$ působením $\text{Inn}(Q)$ na $Q$ a homomorfismus $\varphi: Q \rightarrow W$. Pak platí, že homomorfním obrazem orbity $Q_i$ je souvislý podquandle $\varphi(Q_i) = W_i \preccurlyeq W$.
-:::
-
-Speciálně, pokud je $Q$ souvislý quandle, tak jeho homomorfním obrazem je také souvislý quandle.
-
-:::{.lemma #suma}
-Mějme quandle $Q$, který není souvislý, a uzel $K$. Pak platí, že
-
-$$\text{Col}_Q(K) = \sum_{i=1}^n |\text{Col}_{Q_i}(K)|,$$
-
-kde $Q_i$ jsou orbity působení $\text{Inn}(Q)$ na $Q$.
 :::
 
 :::{.lemma #conn}
@@ -293,7 +285,49 @@ Mějme konečný quandle $Q$. Pak jsou následující tvrzení ekvivalentní:
 $$x_1 *^{\varepsilon_1} (x_2 *^{\varepsilon_2} (\dots *^{\varepsilon_{n-1}} (x_n *^{\varepsilon_n} a)) \dots) = b,$$
 
 kde $\varepsilon_i \in \{ -1, 1 \}$.
+:::
 
+:::proof
+(1) $\Rightarrow$ (2): Mějme $a, b \in Q$. Jelikož je $Q$ souvislý, pak platí, že grupa levých translací $\text{Inn}(Q)$ působí tranzitivně na $Q$. Jelikož je $Q$ konečný, tak platí, že $|\text{Inn}(Q)| \leq |Q|!$, tedy $\text{Inn}(Q)$ je konečná grupa. Tudíž pro každý prvek $\varphi \in \text{Inn}(Q)$ existuje konečná posloupnost prvků $x_1, x_2, \dots, x_n \in Q$ taková, že $\varphi = L_{x_1}^{\varepsilon_1} \circ L_{x_2}^{\varepsilon_2} \circ \dots \circ L_{x_n}^{\varepsilon_n}$, kde $L_x$ je levá translace o $x$. 
+
+Jelikož $\text{Inn}(Q)$ je tranzitivní, tak existuje $\varphi \in \text{Inn}(Q)$ taková, že $\varphi(a) = b$. Tedy existuje konečná posloupnost prvků $x_1, x_2, \dots, x_n \in Q$ taková, že
+
+$$x_1 *^{\varepsilon_1} (x_2 *^{\varepsilon_2} (\dots *^{\varepsilon_{n-1}} (x_n *^{\varepsilon_n} a)) \dots) = b.$$
+
+(2) $\Rightarrow$ (1): Jelikož každé dva prvky dokážeme spojit konečnou posloupností prvků, tak platí, že grupa $G$ daná levými translacemi $\text{Inn}(Q)$ působí tranzitivně na $Q$. Tudíž je $Q$ souvislý.
+:::
+
+:::{.lemma #hom}
+[@bonatto2018structure].
+Uvažujme quandly $Q$ a $W$, na $Q$ rozklad na orbity ${Q_1, Q_2, \dots Q_n}$ působením $\text{Inn}(Q)$ na $Q$ a homomorfismus $\varphi: Q \rightarrow W$. Pak platí, že homomorfním obrazem orbity $Q_i$ je souvislý podquandle $\varphi(Q_i) = W_i \preccurlyeq W$.
+:::
+
+:::proof
+Mějme $a, b \in Q$ ve stejné komponentě. Pak podle lemmatu @conn existuje konečná posloupnost prvků $x_1, x_2, \dots, x_n \in Q$ taková, že 
+
+$$x_1 *^{\varepsilon_1} (x_2 *^{\varepsilon_2} (\dots *^{\varepsilon_{n-1}} (x_n *^{\varepsilon_n} a)) \dots) = b.$$
+
+Nyní, když máme homomorfismus $\varphi: Q \rightarrow W$, tak platí, že
+
+$$\varphi(x_1) *^{\varepsilon_1} (\varphi(x_2) *^{\varepsilon_2} (\dots *^{\varepsilon_{n-1}} (\varphi(x_n) *^{\varepsilon_n} \varphi(a)) \dots) = \varphi(b).$$
+
+Tedy platí, že $\varphi(a)$ a $\varphi(b)$ jsou ve stejné komponentě.
+:::
+
+Speciálně, pokud je $Q$ souvislý quandle, tak jeho homomorfním obrazem je také souvislý quandle.
+
+:::{.lemma #suma}
+Mějme quandle $Q$, který není souvislý, a uzel $K$. Pak platí, že
+
+$$\text{Col}_Q(K) = \sum_{i=1}^n |\text{Col}_{Q_i}(K)|,$$
+
+kde $Q_i$ jsou orbity působení $\text{Inn}(Q)$ na $Q$.
+:::
+
+:::proof
+Mějme homomorfismus $\varphi \in \text{Hom}(Q_K, Q)$. Jelikož je $Q_K$ souvislý, tak podle lemmatu @hom platí, že $\varphi(Q_K)$ je souvislý podquandle $Q$. Jelikož se $Q$ rozkládá na orbity, které jsou souvislé, tak platí, že $\varphi$ náleží do $\text{Hom}(Q_K, Q_i)$ pro nějaké $i$. Zároveň patří nejvýše do jedné takové množiny, jelikož jsou orbity disjunktní. Jelikož je $\varphi$ libovolný, tak platí, že
+
+$$\text{Col}_Q(K) = \sum_{i=1}^n |\text{Col}_{Q_i}(K)|.$$
 :::
 
 :::{.veta #stuha}
@@ -301,7 +335,7 @@ Pro každý souvislý quandle $Q$, $|Q| > 1$ existuje takový uzel $K$, že $\te
 :::
 
 :::proof
-Pro důkaz této věty použijeme konstrukci, která se poprvé objevila v článku (TODO citace).
+Pro důkaz této věty použijeme konstrukci, která se poprvé objevila v článku [@johnson1980homomorphs], a kterou si upravíme tak, aby řešila náš problém. Konstrukce je následující:
 
 Nejprve uvažujme orientovaný $m$-link, $m = |Q|$, takový, že každou komponentu obarvíme jiným prvkem z $Q$. Následně budeme postupně propojovat pomocí pásků tak dlouho, dokud nám nevznikne uzel. Na konci dostaneme uzel, který bude mít netriviální obarvení, jelikož každá komponenta bude obarvena jiným prvkem z $Q$. Pak bude platit, že $\text{Col}_Q(K) > |Q|$.
 
@@ -339,7 +373,7 @@ Mějme konečný quandle $Q$. Pak platí, že $\text{Col}_Q(K)$ není Vassiliev�
 :::proof
 Pokud je $Q$ souvislý, pak podle věty @stuha zkonstruujeme příslušný stuhový uzel $K$ tak, že bude mít netriviální obarvení $\text{Col}_Q(K) > |Q|$. Tedy není konstatní a dle věty @kukurice není Vassilievův invariant.
 
-Naopak pokud $Q$ není souvislý, pak se $Q$ rozpadá na orbity pod působením $\text{Inn}(Q)$. Podle lemmatu @rozklad platí, že každá orbita je maximální souvislý podquandle. My si zvolíme takový podquandle $W$, že $|W| > 1$.
+Naopak pokud $Q$ není souvislý, pak se $Q$ rozpadá na orbity pod působením $\text{Inn}(Q)$. Podle věty @rozklad platí, že každá orbita je souvislý podquandle. My si zvolíme takový podquandle $W$, že $|W| > 1$.
 Pak podle @stuha platí, že $\text{Col}_W(K) > |W|$. Jelikož $W \preccurlyeq Q$, tak podle lemmatu @suma platí, že $\text{Col}_Q(K) \geq \text{Col}_W(K) - |W| + |Q| > |Q|$. Tedy z @kukurice plyne, že $\text{Col}_Q(K)$ není Vassilievův invariant.
 
 Naopak, pokud platí, že $Q$ je totálně nesouvislý, pak podle lemmatu @hom platí, že jedinými homomorfismy z $Q_K$ do $Q$ jsou takové, že jejich obraz je triviální. Tedy platí, že $\text{Col}_Q(K) = |Q|$, a tudíž $\text{Col}_Q(K)$ je konstantní pro všechny uzly $K$.
