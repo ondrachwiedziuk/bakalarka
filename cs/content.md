@@ -21,6 +21,10 @@ statement-kinds:
         style: definition
         label: Lemma
         counter: tvrzeni
+    dusledek:
+        style: definition
+        label: Důsledek
+        counter: tvrzeni
     veta:
         style: definition
         label: Věta
@@ -43,7 +47,7 @@ Intuitivně je poměrně jasné, co by uzel měl být. Tedy vnoření uzavřené
 Abychom se těmto uzlům vyhnuli, budeme používat definici [@Murasugi, p. 6], využívající místo spojitých křivek polygonální křivky. Takovýmto uzlům se pak říká *krotké uzly* (v angličtině *tame knots*).
 
 :::definice
-*Uzlem* rozumíme lomenou uzavřenou jednoduchou křivku $K$ vnořenou do prostoru $\R^3$. Množinu všech takových uzlů značíme $\mathbb{K}$.
+*Uzlem* rozumíme lomenou uzavřenou jednoduchou křivku $K$ vnořenou do prostoru $\R^3$. Množinu všech takových uzlů značíme $\mathcal{K}$.
 :::
 
 ![Trojlístek](../img/trefoil.pdf)
@@ -76,7 +80,7 @@ Uzly $K_1$ a $K_2$ jsou ekvivalentní, právě tehdy když jsou jejich diagramy 
 Klasická výpočetní otázka zní, jestliže dostaneme dva zadané libovolné uzly, dokážeme o nich říct, zda jsou ekvivalentní? Metodou, jak ukázat, že uzly nejsou ekvivalentní, je pomocí invariantů.
 
 :::definice
-Mějme množinu všech uzlů $\mathbb{K}$ a libovolnou množinu $A$. Pak *invariantem* rozumíme takové zobrazení $I: \mathbb{K} \rightarrow A$, že pokud $K_1 \cong K_2$, pak $I(K_1) = I(K_2)$ pro všechny takové uzly $K_1, K_2 \in \mathbb{K}$.
+Mějme množinu všech uzlů $\mathcal{K}$ a libovolnou množinu $A$. Pak *invariantem* rozumíme takové zobrazení $I: \mathcal{K} \rightarrow A$, že pokud $K_1 \cong K_2$, pak $I(K_1) = I(K_2)$ pro všechny takové uzly $K_1, K_2 \in \mathcal{K}$. Říkáme, že $I$ je *úplný invariant*, pokud platí, že $I(K_1) = I(K_2)$ implikuje $K_1 \cong K_2$.
 :::
 
 Z faktu @rm plyne, že nám stačí ověřit, zda se invariant zachovává na Reidemeistrovy pohyby.
@@ -125,7 +129,7 @@ Pro každý uzel $K$ existuje takový copánek $b \in B_n$ pro nějaké $n$ tako
 :::
 
 :::definice
-Pro daný uzel $K$ rozumíme *copánkovým číslem* $s(K)$ (anglicky *braid index*) nejmenší číslo $n$ takové, že existuje $b \in B_n$ tak, že $K$ je ekvivalentní uzávěru $K_b$.
+Pro daný uzel $K$ rozumíme *copánkovým indexem* $s(K)$ (anglicky *braid index*) nejmenší číslo $n$ takové, že existuje $b \in B_n$ tak, že $K$ je ekvivalentní uzávěru $K_b$.
 :::
 
 :::pozorovani
@@ -141,7 +145,7 @@ Mezi další invarianty může patřit počet barvení uzlu algebraickou struktu
 
 1) $a * a = a$ (idempotence);
 
-2) Existuje právě jedno $x \in C$ splňující $a * x = b$ ;(jednoznačné levé dělení), budeme značit $x = a backslash b$;
+2) Existuje právě jedno $x \in C$ splňující $a * x = b$ ;(jednoznačné levé dělení), budeme značit $x = a *^{-1} b$;
 
 3) $a*(b*c) = (a*b)*(a*c)$ (levá samodistributivita).
 :::
@@ -186,7 +190,7 @@ Fundamentální quandl $Q_K$ je úplným invariantem.
 :::
 
 :::definice
-Mějme uzel $K$, jeho fundamentální quandle $Q_K$ a libovolný quandle $W$. Pak *počtem obarvení* $\text{Col}_W(K)$ rozumíme počet homomorfismů $\varphi: Q_K \rightarrow W$.
+Mějme uzel $K$, jeho fundamentální quandle $Q_K$ a libovolný quandle $W$. Pak *počtem obarvení* $\text{Col}_W(K)$ rozumíme počet homomorfismů $\varphi: Q_K \rightarrow W$. Tedy $\text{Col}_W(K) = |\text{Hom}(Q_K, W)|$.
 :::
 
 :::pozorovani
@@ -219,4 +223,132 @@ Invariant $v$ se nazývá *Vassilievův*, nebo také *konečného typu* stupně 
 
 :::tvrzeni
 Vzorec pro Vassilievův invariant.
+:::
+
+# Barvení jako Vassilievův invariant
+
+V článku [@eisermann1999number] se autor zabývá otázkou, zda je počet grupových homomorfismů z fundamentální grupy do zvolené grupy $G$ Vassilievův invariant. Jeho výsledkem je charakterizace, že pokud je $G$ nilponentní, tak je počet homomorfismů konstantní, jinak není Vassilievův invariant. V tété kapitole se pokusíme zobecnit tento výsledek na quandle.
+
+Motivací je, že fundamentální quandle je úplný invariant, tedy plně charakterizuje uzel. Zároveň platí, že grupové homomorfismy mají svojí representaci i jako quandleové homomorfismy, ovšem ne každý quandleový homomorfismus má svojí reprezentaci jako grupový homomorfismus. Tedy pokud bychom dokázali obdobný výsledek pro quandleové homomorfismy, tak bychom mohli získat silnější výsledek, než který je v původním článku.
+
+## Velikost barvení
+
+:::{.veta #omezeni}
+(Eisermannova věta).
+Buď $s(K)$ copánkový index uzlu $K$. Pak pokud invariant $v: \mathcal{K} \rightarrow \mathbb{C}$ splňuje, že $|v(K)| \leq f(s(K))$ pro nějakou funkci $f: \mathbb{N} \rightarrow \mathbb{N}$ a pro všechny uzly $K \in \mathcal{K}$, pak $v$ není Vassilievův invariant, nebo je konstantní.
+:::
+
+:::{.veta #kukurice}
+Pro každý quandle $Q$ platí, že počet obarvení $\text{Col}_Q(K)$ není Vassilievův invariant, nebo je konstantní.
+:::
+
+:::proof
+Mějme fixně zadaný quandle $Q$ a pro něj uvažujme libovolný uzel $K$ a jeho minimální copánkovou reprezentaci odpovídající copánkovému indexu $s(K)$. Pak platí, že máme-li konkrétní obarvení $f \in \text{Hom}(Q_K, Q)$, tak je jednoznačně určeno obarvením konců provázků v copánkové reprezentaci. Tedy platí, že $\text{Col}_Q(K)$ dokážeme omezit tak, že každému konci přiřadíme nějaký prvek z $Q$. Tedy
+
+$$\text{Col}_Q(K) \leq |Q|^{s(K)}.$$
+
+Použitím věty @omezeni dostáváme, že $\text{Col}_Q(K)$ není Vassilievův invariant, nebo je konstantní.
+:::
+
+
+## Triviální barvení
+
+:::definice
+Mějme quandle $Q$. Pokud platí, že je působení $\text{Inn}(Q)$ na $Q$ tranzitivní, pak říkáme, že $Q$ je souvislý quandle.
+:::
+
+:::tvrzeni
+Mějme uzel $K$ a jeho fundamentální quandle $Q_K$. Pak platí, že $Q_K$ je souvislý quandle.
+:::
+
+:::{.lemma #rozklad}
+Mějme quandle $Q$ a grupu vnitřních automorfismů $\text{Inn}(Q)$. Pak platí, že působení $\text{Inn}(Q)$ na $Q$ rozkládá $Q$ na orbity a každá orbita je maximální souvislý podquandle.
+:::
+
+:::definice
+Mějme quandle $Q$. Pokud platí, že pro všechny orbity působení $\text{Inn}(Q)$ na $Q$ platí, že jejich velikost je rovná $1$, pak říkáme, že $Q$ je totálně nesouvislý quandle.
+:::
+
+:::{.lemma #hom}
+Uvažujme quandly $Q$ a $W$, na $Q$ rozklad na orbity ${Q_1, Q_2, \dots Q_n}$ působením $\text{Inn}(Q)$ na $Q$ a homomorfismus $\varphi: Q \rightarrow W$. Pak platí, že homomorfním obrazem orbity $Q_i$ je souvislý podquandle $\varphi(Q_i) = W_i \preccurlyeq W$.
+:::
+
+Speciálně, pokud je $Q$ souvislý quandle, tak jeho homomorfním obrazem je také souvislý quandle.
+
+:::{.lemma #suma}
+Mějme quandle $Q$, který není souvislý, a uzel $K$. Pak platí, že
+
+$$\text{Col}_Q(K) = \sum_{i=1}^n |\text{Col}_{Q_i}(K)|,$$
+
+kde $Q_i$ jsou orbity působení $\text{Inn}(Q)$ na $Q$.
+:::
+
+:::{.lemma #conn}
+Mějme konečný quandle $Q$. Pak jsou následující tvrzení ekvivalentní:
+
+1) $Q$ je souvislý;
+
+2) pro každé dva prvky $a, b \in Q$ platí, že existuje konečná posloupnost prvků $x_1, x_2, \dots, x_n \in Q$ taková, že
+
+$$x_1 *^{\varepsilon_1} (x_2 *^{\varepsilon_2} (\dots *^{\varepsilon_{n-1}} (x_n *^{\varepsilon_n} a)) \dots) = b,$$
+
+kde $\varepsilon_i \in \{ -1, 1 \}$.
+
+:::
+
+:::{.veta #stuha}
+Pro každý souvislý quandle $Q$, $|Q| > 1$ existuje takový uzel $K$, že $\text{Col}_Q(K) > |Q|$.
+:::
+
+:::proof
+Pro důkaz této věty použijeme konstrukci, která se poprvé objevila v článku (TODO citace).
+
+Nejprve uvažujme orientovaný $m$-link, $m = |Q|$, takový, že každou komponentu obarvíme jiným prvkem z $Q$. Následně budeme postupně propojovat pomocí pásků tak dlouho, dokud nám nevznikne uzel. Na konci dostaneme uzel, který bude mít netriviální obarvení, jelikož každá komponenta bude obarvena jiným prvkem z $Q$. Pak bude platit, že $\text{Col}_Q(K) > |Q|$.
+
+![$m$-link](../img/link.pdf)
+
+Mějme zadaný souvislý quandle $Q$. Jelikož je $Q$ souvislý, pak podle lemmatu @conn existuje konečná posloupnost prvků $x_1, x_2, \dots, x_n \in Q$ taková, že
+
+$$x_1 *^{\varepsilon_1} (x_2 *^{\varepsilon_2} (\dots *^{\varepsilon_{n-1}} (x_n *^{\varepsilon_n} a)) \dots) = b,$$
+
+pro každé dva prvky $a, b \in Q$.
+
+Začněme s komponentou obarvenou prvkem $a$. Z ní povedeme pásek. Pokud pásek bude křižovat s nějakou jinou komponentou, tak budeme postupovat podle jedné z následujících situací:
+
+1) Pokud se pásek kříží s komponentou obarvenou prvkem $c \neq x_1$ pak pásek povedeme pod celou komponentou. Dojde tedy k situaci na obrázku \ref{under}. Tedy pásek povedeme pod celou komponentou, aniž bychom změnili obarvení konec pásku.
+
+![Pásek pod komponentou](../img/under.pdf){#under}
+
+2) Pokud se pásek kříží s komponentou obarvenou prvkem $c = x_1$ a platí, že $\varepsilon_1 = 1$, pak pásek provlékneme skrz tuto komponentu způsobem jako na obrázku \ref{through}. Konec pásku bude obarvený prvkem $x_1 * a$, zatímco komponenta obarvená prvkem $x_1$ zůstane nezměněná.
+
+![$x_1 * a$](../img/through.pdf){#through}
+
+3) Pokud se pásek kříží s komponentou obarvenou prvkem $c = x_1$ a platí, že $\varepsilon_1 = -1$, pak pásek provlékneme skrz tuto komponentu způsobem jako na obrázku \ref{through_inv}. Konec pásku bude obarvený prvkem $x_1 *^{-1} a$, zatímco komponenta obarvená prvkem $x_1$ zůstane nezměněná.
+
+![$x_1 *^{-1} a$](../img/through_inv.pdf){#through_inv}
+
+Tento způsob budeme opakovat pro konec pásku tak dlouho, dokud konec pásku nebude obarvený prvkem $b$. Jelikož je posloupnost $x_1, x_2, \dots x_n$ konečná, tak k němu opravdu dojdeme. Následně pásek připojíme na komponentu obarvenou prvkem $b$.
+
+Počet komponent je konečný a jednou iterací algoritmu jsme snížili počet komponent o jedna. Algoritmus budeme tedy opakovat tak dlouho, dokud nedostaneme uzel. Takový uzel nazývá *stuhový uzel* (anglicky *ribbon knot*). Jelikož jsme každou komponentu $|Q|$-linku obarvili jiným prvkem z $Q$ a algoritmus toto obarvení zachovává, dostaneme uzel, který bude mít netriviální obarvení. Tedy $\text{Col}_Q(K) > |Q|$.
+:::
+
+:::veta
+Mějme konečný quandle $Q$. Pak platí, že $\text{Col}_Q(K)$ není Vassilievův invariant, právě tehdy když existuje souvislý podquandle $W \preccurlyeq Q$ takový, že $|W| > 1$ a $W$ odpovídá nějaké orbitě působení $\text{Inn}(Q)$ na $Q$.
+:::
+
+:::proof
+Pokud je $Q$ souvislý, pak podle věty @stuha zkonstruujeme příslušný stuhový uzel $K$ tak, že bude mít netriviální obarvení $\text{Col}_Q(K) > |Q|$. Tedy není konstatní a dle věty @kukurice není Vassilievův invariant.
+
+Naopak pokud $Q$ není souvislý, pak se $Q$ rozpadá na orbity pod působením $\text{Inn}(Q)$. Podle lemmatu @rozklad platí, že každá orbita je maximální souvislý podquandle. My si zvolíme takový podquandle $W$, že $|W| > 1$.
+Pak podle @stuha platí, že $\text{Col}_W(K) > |W|$. Jelikož $W \preccurlyeq Q$, tak podle lemmatu @suma platí, že $\text{Col}_Q(K) \geq \text{Col}_W(K) - |W| + |Q| > |Q|$. Tedy z @kukurice plyne, že $\text{Col}_Q(K)$ není Vassilievův invariant.
+
+Naopak, pokud platí, že $Q$ je totálně nesouvislý, pak podle lemmatu @hom platí, že jedinými homomorfismy z $Q_K$ do $Q$ jsou takové, že jejich obraz je triviální. Tedy platí, že $\text{Col}_Q(K) = |Q|$, a tudíž $\text{Col}_Q(K)$ je konstantní pro všechny uzly $K$.
+:::
+
+:::dusledek
+Mějme grupu $G$. Pak platí, že následující tvrzení jsou ekvivalentní:
+
+1) $G$ je nilpotentní;
+
+2) quandle $\text{Conj}(G)$ je totálně nesouvislý.
 :::
