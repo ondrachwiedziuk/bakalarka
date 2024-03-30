@@ -83,7 +83,7 @@ def print_quandle(cayley_table):
         # Make the table look nice
         row = ""
         for j in range(len(cayley_table)):
-            row += str(cayley_table[j][i]) + " "
+            row += str(cayley_table[i][j]) + " "
         print(row)
     print()
 
@@ -92,9 +92,17 @@ def load_quandles(order):
     return pickle.load(open(f"quandles_{order}.p", "rb"))
 
 def main():
-    order = 4
+    order = 3
     random.seed(1)
-    random_quandle(order)
+    gen_quandles(order)
+
+def test():
+    # Test the quandle properties
+    cayley_table = [[0, 0, 0, 0], [2, 1, 1, 1], [1, 2, 2, 2], [3, 3, 3, 3]]
+    print_quandle(cayley_table)
+    print(check_imdempotence(cayley_table))
+    print(check_distributivity(cayley_table))
+    print(check_if_quandle(cayley_table))
 
 if __name__ == "__main__":
-    main()
+    test()
