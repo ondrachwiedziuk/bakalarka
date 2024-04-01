@@ -167,7 +167,7 @@ Mějme quandle $(Q, *)$. Pak *podquandlem* $W$ rozumíme dvojici $(W, *|_W)$ pod
 :::
 
 :::definice
-Buď $Q$ quandle. Na něm zavedeme relaci ekvivalence $\alpha$ takovou, že $[a]_\alpha * [b]_\alpha = [a * b]_\alpha$ pro všechna $a, b \in Q$. Takový quandle značíme $Q/\alpha$ a nazýváme *faktorquandlem*.
+Buď $Q$ quandle. Na něm zavedeme relaci ekvivalence $\alpha$ takovou, že $[a]_\alpha * [b]_\alpha = [a * b]_\alpha$ pro všechna $a, b \in Q$. Vzniklý quandle na blocích ekvivalence značíme $Q/\alpha$ a nazýváme *faktorquandlem*.
 :::
 
 Také platí, že $a \mapsto [a]_\alpha$ je homomorfismus z $Q$ na $Q/\alpha$. Také platí, že (citace) pokud máme homomorfismus $\varphi: Q \rightarrow W$, jádro, tj množina $\Ker \varphi = \{ (a, b) \in Q \times Q: \varphi(a) = \varphi(b) \}$, tvoří kongruenci na $Q$ a faktorquandlem $Q/\Ker \varphi$ je izomorfní s obrazem $\Ima \varphi(Q) \preccurlyeq W$.
@@ -280,6 +280,10 @@ Mějme quandle $Q$ a grupu vnitřních automorfismů $\Inn{Q}$. Pak platí, že 
 Zafixujme si orbitu nějakou $W$. Tak platí, že $W$ je uzavřená na operaci $*$, jelikož pokud $a, b \in W$, tak $a * b = L_a(b) \in W$. Zároveň je uzavřená na levé dělení, jelikož pokud $a, b \in W$, tak $a *^{-1} b = L_a^{-1}(b) \in W$. Tedy $W$ je podquandle.
 :::
 
+:::definice
+Mějme quandle $Q$. Pak $\Orb{Q}$ značíme faktorquandle $Q/\alpha$, kde $\alpha$ je kongruence taková, že $a \alpha b$ právě tehdy, když $a$ a $b$ leží ve stejné orbitě působení $\Inn{Q}$.
+:::
+
 :::{.tvrzeni #rozklad}
 [@ehrman2006toward].
 Mějme quandle $Q$. Pak platí, že se dá jednoznačně rozložit na maximální souvislé podquandly $(Q_1, Q_2, \dots, Q_n)$.
@@ -341,8 +345,6 @@ $$\Col{Q}{K} = \sum_{i=1}^n |\text{Col}_{Q_i}(K)|.$$
 
 ## Reduktivita
 
-Tohle bude velmi výživná kapitolka.
-
 :::definice
 Buď $n \in \N$. Pak quandle $Q$ nazýváme *$n$-reduktivní*, pokud platí, že všechny $a, b, c_1, c_2, \dots, c_n \in Q$ splňují:
 
@@ -352,19 +354,49 @@ $$((\dots(a * c_1) \dots) * c_{n-1}) * c_n = ((\dots(b * c_1)\dots) * c_{n-1}) *
 :::
 
 :::definice
-Lokální reduktivnost
+Buď $Q$ quandle. Pak *lokálně $n$-reduktivním* quandlem rozumíme takový quandle, že pro každé $a, b \in Q$ platí rovnost:
+
+$$((\dots(a *\underbrace{b) \dots) * b) * b}_n = b$$,
+
+Říkáme, že $Q$ je *lokálně reduktivní*, pokud je lokálně $n$-reduktivní pro nějaké $n \in \N$.
 :::
 
 :::{.lemma #pumping}
-Pokud všechny orbity jsou lokálně reduktivní, tak je quandle lokálně reduktivní.
+Pokud všechny orbity jsou lokálně $n$-reduktivní, tak je quandle lokálně $n+1$-reduktivní.
 :::
 
-:::{.lemma #local}
+:::proof
+Mějme quandle $\Orb{Q}$. Víme, že pro každý vnitřní automorfismus $\varphi \in \Inn{Q}$ platí, že $[\varphi(a)] = [a]$ pro všechna $[a] \in \Orb{Q}$. Tedy $\Orb{Q}$ je triviální quandle, který je $1$-reduktivní.
+
+Dále mějme nějaké $[a] \in \Orb{Q}$ a $b \in Q$. Pak platí, že
+
+$$[a * b] = [a] * [b] = [b]$$.
+
+Jelikož orbita $b$ je lokálně $n$-reduktivní, tak z toho už plyne, že:
+
+$$((\dots(a *\underbrace{b) \dots) * b) * b}_{n+1} = b$$,
+
+protože tím prvním krokem se dostaneme do orbity, ve které je $b$, a v ní už uplatníme lokální reduktivitu. Tedy $Q$ je lokálně $n+1$-reduktivní.
+:::
+
+:::{.veta #local}
 Pro konečné quandly platí, že je lokálně reduktivní, právě tehdy když je reduktivní.
+:::
+
+:::pozn
+Dost těžký dokázat, používá se dost pokročilá teorie grup. Má cenu to zde dokazovat?
 :::
 
 :::{.lemma #redsou}
 Jediný souvislý reduktivní quandle je triviální quandle velikosti $1$.
+:::
+
+:::proof
+Mějme souvislý reduktivní quandle $Q$, ten je i lokálně reduktivní. tedy máme, že pro každé $a, b \in Q$ platí, že
+
+$$((\dots(a *\underbrace{b) \dots) * b) * b}_n = b$$.
+
+Jelikož je $Q$ souvislý, pak existuje $L \in \Inn{Q}$ takové, že $L(a) = b$. Pak působením $L$ dostaneme, že
 :::
 
 :::tvrzeni
