@@ -17,9 +17,10 @@ Základní technikou rozlišování uzlů je hledání invariantů. Mezi nejzná
 
 Quandle je algebraická struktura, která vznikla přesně pro účely rozlišování uzlů. Takzvaný fundamentální quandle dokonce jednoznačně určuje uzly až na orientaci a překlopení, což dokázal D. Joyce v roce 1982. Bohužel, výpočet fundamentálního quandle je příliš složitý pro praktické použití. Jako zjednodušení se počítá počet homomorfismů do konečného quandlu. Tomu pak říkáme barvení pomocí quandlu.
 
-V této práci se zaměřím na charakterizaci quandlů, které dávají triviální obarvení pro všechny uzly. V první kapitole jsou definovány základní pojmy z teorie uzlů.
-Ve druhé kapitole se budu věnovat quandlům a jejich základním vlastnostem jako je spojitost.
-Ve třetí kapitole ukážu, že barvení quandlem je pro všechny uzly trivální, právě tehdy když je quandle reduktivní.
+V této práci se zaměřím na charakterizaci quandlů, které dávají triviální obarvení pro všechny uzly.
+V první kapitole jsou definovány základní pojmy z teorie uzlů. Jedná se o víceméně neformální úvod do problematiky uzlů a sám o sobě neobsahuje žádné nové výsledky.
+Ve druhé kapitole se budu věnovat quandlům a jejich vlastnostem. Zaměřím se především na spojitost a dokážu pár základních tvrzení o rozkladu quandlu na spojité komponenty.
+Ve třetí kapitole zavedu pojem reduktivnosti quandlu a ukážu, že barvení quandlem je pro všechny uzly trivální, právě tehdy když je quandle reduktivní.
 Na závěr ve čtvrté kapitole se zaměřím na koncept Vassilievových invariantů a dokážu, že barvení pomocí quandlů je Vassilievův invariant právě tehdy, když je quandle reduktivní. Také rozvinu výsledek z uzlů na linky a ukážu, že barvení pomocí quandlů je Vassilievův invariant pro linky, právě tehdy když je quandle triviální.
 
 Ve své práci vycházím především ze tří článků: \cite{eisermann1999number}, \cite{johnson1980homomorphs} a \cite{bonatto2020quandles}. Využívám podobné důkazové techniky, abych dosáhl svých výsledků.
