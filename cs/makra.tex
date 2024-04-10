@@ -149,8 +149,22 @@
 \newcommand{\abs}[1]{\left|{#1}\right|}
 \newcommand{\dint}{\int_0^\tau\!\!\int_0^\tau}
 \newcommand{\isqr}[1]{\frac{1}{\sqrt{#1}}}
-\newcommand{\quot}[2]{{^{\textstyle#1}\big/_{\textstyle#2}}}
-
+\newcommand\quot[2]{
+  \mathchoice
+      {% \displaystyle
+          \text{\raise1ex\hbox{$#1$}\Big/\lower1ex\hbox{$#2$}}%
+      }
+      {% \textstyle
+          #1\,/\,#2
+      }
+      {% \scriptstyle
+          #1\,/\,#2
+      }
+      {% \scriptscriptstyle  
+          #1\,/\,#2
+      }
+}
 %%% Vychytávky pro tabulky
 \newcommand{\pulrad}[1]{\raisebox{1.5ex}[0pt]{#1}}
 \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
+\newcommand{\bx}[1]{\tikz{\path[draw=#1,fill=#1] (0.125em,0.125em) rectangle (0.75em,0.75em);}}
