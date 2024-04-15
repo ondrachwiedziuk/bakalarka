@@ -78,7 +78,11 @@ Mějme quandle $(Q, *)$. Pak *podquandlem* $W \preccurlyeq Q$ rozumíme dvojici 
 Buď $Q$ quandle. Na něm zavedeme relaci ekvivalence $\alpha$ takovou, že $[a]_\alpha * [b]_\alpha = [a * b]_\alpha$ pro všechna $a, b \in Q$. Vzniklý quandle definovaný na blocích ekvivalence značíme $\quot{Q}{\alpha}$ a nazýváme *faktorquandlem* quandlu $Q$ podle ekvivalence $\alpha$.
 :::
 
-Víme, že $a \mapsto [a]_\alpha$ je homomorfismus z $Q$ na $\quot{Q}{\alpha}$. Také platí, že pokud máme homomorfismus $\varphi: Q \rightarrow W$, pak jádro, tj množina $\Ker \varphi = \{ (a, b) \in Q \times Q: \varphi(a) = \varphi(b) \}$, tvoří kongruenci na $Q$ a faktorquandle $\quot{Q}{\Ker \varphi}$ je izomorfní s obrazem $\Ima \varphi(Q) \preccurlyeq W$. Jedná se o klasický výsledek univerzální algebry, který můžeme nalézt např. v knize [@Jezek2008].
+Víme, že $a \mapsto [a]_\alpha$ je homomorfismus z $Q$ na $\quot{Q}{\alpha}$. Také platí, že pokud máme homomorfismus $\varphi: Q \rightarrow W$, pak jádro, tj množina $\Ker \varphi = \{ (a, b) \in Q \times Q: \varphi(a) = \varphi(b) \}$, tvoří kongruenci na $Q$ a faktorquandle $\quot{Q}{\Ker \varphi}$ je izomorfní s obrazem $\Ima \varphi(Q) \preccurlyeq W$. Jedná se o klasický výsledek univerzální algebry, který můžeme nalézt např. v knize [@Jezek2008]. Dalším takovým výsledkem je, že kongruence tvoří svaz:
+
+:::definice
+Kongruence $\alpha$ tvoří svaz, který značíme $\Con{Q}$. Minimální prvek tohoto svazu značíme $0_Q$ a je definován jako $\{ (a, a): a \in Q \}$. Maximální prvek značíme $1_Q$ a je definován jako $Q \times Q$.
+:::
 
 Nyní tyto pojmy využijeme, abychom definovali fundamentální quandle. Ten je základním nástrojem pro studium barvení uzlů.
 
@@ -195,7 +199,7 @@ $$x_1 *^{\varepsilon_1} (x_2 *^{\varepsilon_2} (\dots *^{\varepsilon_{n-1}} (x_n
 
 Nyní, když máme homomorfismus $\varphi: Q \rightarrow W$, tak platí, že
 
-$$\varphi(x_1) *^{\varepsilon_1} (\varphi(x_2) *^{\varepsilon_2} (\dots *^{\varepsilon_{n-1}} (\varphi(x_n) *^{\varepsilon_n} \varphi(a)) \dots) = \varphi(b).$$
+$$\varphi(x_1) *^{\varepsilon_1} (\varphi(x_2) *^{\varepsilon_2} (\dots *^{\varepsilon_{n-1}} (\varphi(x_n) *^{\varepsilon_n} \varphi(a)) \dots)) = \varphi(b).$$
 
 Tedy platí, že $\varphi(a)$ a $\varphi(b)$ jsou ve stejné komponentě.
 :::
@@ -231,7 +235,7 @@ $$\Col{Q}{K} = \sum_{i=1}^n |\text{Col}_{Q_i}(K)|.$$
 
 ## Reduktivita
 
-V této sekci se budeme zabývat reduktivními quandly. Tyto quandly jsou studovány v článcích [@bonatto2020quandles], [@bonatto2021universal] a [@Jedlicka2020]. Ovšem jejich motivace při definici reduktivity je čistě algebraická. My se budeme zabývat reduktivitou ve vztahu k uzlům a jejich barvením.
+V této sekci se budeme zabývat reduktivními quandly. Tyto quandly jsou studovány v článcích [@bonatto2020quandles], [@bonatto2021universal] a [@Jedlicka2020]. Ovšem jejich motivace při definici reduktivity je čistě algebraická. My se budeme zabývat reduktivitou ve vztahu k uzlům a jejich barvením. V této kapitole vycházím primárně z prvního zmíněného článku.
 
 :::definice
 Buď $n \in \N$. Pak quandle $Q$ nazýváme *$n$-reduktivní*, pokud platí, že všechny $a, b, c_1, c_2, \dots, c_n \in Q$ splňují:
@@ -241,14 +245,46 @@ $$((\dots(a * c_1) \dots) * c_{n-1}) * c_n = ((\dots(b * c_1)\dots) * c_{n-1}) *
 Říkáme, že $Q$ je *reduktivní*, pokud existuje $n \in \N$, že je $n$-reduktivní.
 :::
 
-Zde chci definovat rozklad na orbity rekurzivním vztahem jako v [@bonnato2020quandles].
+:::definice
+Buď $Q$ quandle. Pak definujeme grupu $\text{Trans}_\alpha = \langle L_a L_b^{-1} : a\, \alpha\, b \rangle \trianglelefteq \Inn{Q}$. Tato grupa se nazývá *transvekční grupa* quandlu $Q$ podle relace ekvivalence $\alpha$.
+:::
+
+:::{.lemma #trans}
+Buď $Q$ quandle. Pak jsou orbity působení $\Inn{Q}$ na $Q$ a transvekční grupy $\text{Trans}_{1_Q}$ na $Q$ shodné.
+:::
+
+:::definice
+Buď $Q$ quandle. Pak definujeme $\Orb{\text{Trans}_\alpha}$ jako množinu $\{ (a, b) \in Q \times Q: \varphi(a) = b, \varphi \in \text{Trans}_\alpha \}$. Dále definujme $\Orb[n+1]{Q} = \Orb{\text{Trans}_{\Orb[n]{Q}}}$.
+:::
+
+Jedná se o trochu robustnější definici rozkladu na souvislé komponenty, která nám umožňuje s nimi lépe pracovat za pomocí kongruencí.
+
+:::{.lemma #blivajz}
+Technické lemma z [@bonatto2020quandles].
+:::
 
 :::{.tvrzeni #redbar}
-Buď $Q$ quandle. Pak jsou následující podmínky ekvivalentní:
+Buď $Q$ konečný quandle. Pak jsou následující podmínky ekvivalentní:
 
 1) $Q$ je reduktivní.
 
-2) Pro každou komponentu $Q_i$ rozkladu $Q$ platí, že $|Q_i| = 1$.
+2) $\Orb[n]{Q} = 0_Q$ pro nějaké $n \in \N$.
+
+3) Pro každou komponentu $Q_i$ rozkladu $Q$ platí, že $|Q_i| = 1$.
+:::
+
+:::proof
+$(1) \implies (2)$:
+
+$(2) \implies (1)$:
+
+$(2) \implies (3)$:
+
+Vidíme, že $\Orb[n]{Q}$ odpovídá tomu, že budeme postupně rozkládat $Q$ na menší a menší orbity, až dosáhneme rozkladu na souvislé komponenty. Jelikož $\Orb[n]{Q} = 0_Q$, tak všechny komponenty mají velikost $1$.
+
+$(3) \implies (2)$:
+
+Pokud všechny komponenty rozkladu mají velikost $1$, tak to znamená, že existuje $n \leq |Q|$ takové, že $\Orb[n]{Q} = 0_Q$, protože $Q$ je konečný quandle.
 :::
 
 :::{.dusledek #redsou}
