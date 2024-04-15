@@ -309,8 +309,11 @@ Pokud všechny komponenty rozkladu mají velikost $1$, tak to znamená, že exis
 :::
 
 :::{.dusledek #redsou}
-Jediný souvislý reduktivní quandle je triviální quandle velikosti $1$.
+Jediný souvislý reduktivní quandle je $T_1$.
 :::
+
+:::proof
+Mějme souvislý reduktivní quandle $Q$. Jelikož je reduktivní, tak podle \ref{redbar} všechny komponenty rozkladu mají velikost $1$. Jenže zároveň je $Q$ souvislý. Tudíž se jedná o $T_1$.
 
 <!-- :::definice
 Buď $Q$ quandle. Pak *lokálně $n$-reduktivním* quandlem rozumíme takový quandle, že pro každé $a, b \in Q$ platí rovnost:
