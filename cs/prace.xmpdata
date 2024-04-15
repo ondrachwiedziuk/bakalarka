@@ -2,6 +2,10 @@
 
 \Author{Ondřej Chwiedziuk}
 \Title{Barvicí invarianty uzlů}
-\Keywords{Uzly\sep Quandle \sep Vassiliev invariant}
-\Subject{Abstrakt práce}
+\Keywords{Reduktivní quandly \sep Vassilievovy invarianty \sep Barvení uzlů}
+\Subject{Uzly můžeme barvit různými konečnými quandly a zjišťovat, zda mají netriviální obarvení. Pokud ano, pak dokážeme
+říct, že daný uzel není unknot. V práci se však zaměříme na takové quanldy, které vždy dávají triviální barvení.
+Proč by nás tedy měly zajímat? Mají totiž zajímavé algebraické vlastnosti. Dokážeme, že jsou to právě reduktivní
+quandly a také, že barvení uzlů pomocí reduktivních quandlů je Vassilievův invariant. A žádné jiné barvení není.
+Stejně tak budeme charakterizovat quandly, které dávají triviální barvení linků.}
 \Publisher{Univerzita Karlova}
