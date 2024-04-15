@@ -71,14 +71,14 @@ Mějme quandly $Q$ a $W$. Pak *quandlovým homomorfismem* $\varphi: Q \rightarro
 :::
 
 :::definice
-Mějme quandle $(Q, *)$. Pak *podquandlem* $W$ rozumíme dvojici $(W, *|_W)$, kde $W \subseteq Q$ a platí, že $W$ je uzavřená na operaci $*$ jakožto zúžení operace z $Q$. Vztah značíme $W \preccurlyeq Q$.
+Mějme quandle $(Q, *)$. Pak *podquandlem* $W \preccurlyeq Q$ rozumíme dvojici $(W, *|_W)$, kde $W \subseteq Q$ a platí, že $W$ je uzavřená na operaci $*$ jakožto zúžení operace z $Q$.
 :::
 
 :::definice
 Buď $Q$ quandle. Na něm zavedeme relaci ekvivalence $\alpha$ takovou, že $[a]_\alpha * [b]_\alpha = [a * b]_\alpha$ pro všechna $a, b \in Q$. Vzniklý quandle definovaný na blocích ekvivalence značíme $\quot{Q}{\alpha}$ a nazýváme *faktorquandlem* quandlu $Q$ podle ekvivalence $\alpha$.
 :::
 
-Víme, že $a \mapsto [a]_\alpha$ je homomorfismus z $Q$ na $\quot{Q}{\alpha}$. Také platí, že pokud máme homomorfismus $\varphi: Q \rightarrow W$, pak jádro, tj množina $\Ker \varphi = \{ (a, b) \in Q \times Q: \varphi(a) = \varphi(b) \}$, tvoří kongruenci na $Q$ a faktorquandle $\quot{Q}{\Ker \varphi}$ je izomorfní s obrazem $\Ima \varphi(Q) \preccurlyeq W$. Jedná se o klasický výsledek univerzální algebry.
+Víme, že $a \mapsto [a]_\alpha$ je homomorfismus z $Q$ na $\quot{Q}{\alpha}$. Také platí, že pokud máme homomorfismus $\varphi: Q \rightarrow W$, pak jádro, tj množina $\Ker \varphi = \{ (a, b) \in Q \times Q: \varphi(a) = \varphi(b) \}$, tvoří kongruenci na $Q$ a faktorquandle $\quot{Q}{\Ker \varphi}$ je izomorfní s obrazem $\Ima \varphi(Q) \preccurlyeq W$. Jedná se o klasický výsledek univerzální algebry, který můžeme nalézt např. v knize [@Jezek2008].
 
 Nyní tyto pojmy využijeme, abychom definovali fundamentální quandle. Ten je základním nástrojem pro studium barvení uzlů.
 
