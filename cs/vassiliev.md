@@ -44,29 +44,37 @@ statement-kinds:
 ---
 # Barvení jako Vassilievův invariant
 
+V této kapitole ukážu další charakterizaci reduktivních quandlů a to pomocí Vassilievových invariantů. Nejprve je ovšem uvést několik základních výsledků z teorie copánkových grup, které následně budou aplikovány v příslušném důkazu.
+
 ## Copánky
 
-Jedním z užitečných pohledů na uzly je přes takzvané copánky. Něco o historii.
+Copánkovou grupu jako první zavedl Emil Artin v roce 1925. Copánky se skládají z $n$ pramenů, které jsou upevněny k horní a dolní desce a mohou se mezi sebou křížit ve smyslu Reidemeistrových pohybů 2 a 3. My si zavedeme copánkovou grupu pomocí prezentace.
 
 :::definice
-Buď zadané číslo $n$. Pak $B_n$ značí grupu danou prezentací $B_n = \langle \sigma_1, \sigma_2, \dots, \sigma_{n-1} |\sigma_i \sigma_{i+1} \sigma_i = \sigma_{i+1} \sigma_i \sigma_{i+1}; \sigma_i \sigma_j = \sigma_j \sigma_i \rangle$, kde $i, j \in \{ 1, 2, \dots, n - 1 \}; |i - j| \geq 2$.
+Buď zadané číslo $n$. Pak $B_n$ značí grupu danou prezentací $B_n = \langle \sigma_1, \sigma_2, \dots, \sigma_{n-1} |\sigma_i \sigma_{i+1} \sigma_i = \sigma_{i+1} \sigma_i \sigma_{i+1}; \sigma_i \sigma_j = \sigma_j \sigma_i \rangle$, kde v první sadě relací $i \in \{1, 2,\dots n-1\}$ a ve druhé $i, j \in \{ 1, 2, \dots, n \}; |i - j| \geq 2$.
 :::
 
-Copánky si můžeme představit jako $n$ šňůrek natažených mezi dvěma deskami, přičemž pro ně platí Reidemeisterovy pohyby 2 a 3. Skládání $a \cdot b$ funguje tak, že se vezme spodní deska z $a$ a přilepí se k horní desce $b$ tak, aby na sebe navazovaly provázky, a pak se ty desky odstraní, aby byly opět jenom horní a dolní. Prvky $b$ tedy budeme ztotožňovat s příslušnou geometrickou konstrukcí. 
+První relace je ekvivalentem Reidemeistrova pohybu 3 a druhá relace říká, že pokud jsou příslušné prameny disjunktní, tak se mohou prohazovat.
+
+Skládání $a \cdot b$ funguje geometricky tak, že se vezme spodní deska z $a$ a přilepí se k horní desce $b$ tak, aby na sebe navazovaly příslušné prameny, a pak se prostřední deska odstraní. Jednotkový prvek je copánek bez křížení. Inverzní prvek je symetrické překlopení copánku. Vlastně tak odpovídá Reidemeistrovu pohybu 2.
 
 ![Příklad copánku](../img/braid.pdf)
 
-Mějme copánkovou grupu $B_n$ . Pak *uzávěrem* $b \in B_n$ rozumíme uzel $K_b$ takový, který vznikne z $b$ tak, že konce šňůrek přilepíme k sobě tak, že $i$-tá šňůrka zhora se přilepí k $i$-té šňůrce zdola. Tímto způsobem nevznikne vždy uzel podle naší definice, ale obecně vznikne *link*, což je disjunktní sjednocení konečně mnoha uzlů.
+Pokud vezmeme nějaký copánek $b \in B_n$, pak můžeme udělat tzv. *uzávěr*, kdy dojde ke slepení horní a spodní desky tak, že se přilepí k sobě protilehlé prameny. Tímto obecně dostaneme link. Budeme ho značit $K_b$.
 
 ![Lepení copánku](../img/glue.pdf)
 
+Jedna z nejznámějších vět z teorie uzlů je Alexanderova věta, která říká, že každý uzel lze získat jako uzávěr nějakého copánku.
+
 :::veta
 (Alexanderova věta).
-Pro každý uzel $K$ existuje číslo $n \in \N$ a $b \in B_n$, že $K$ je ekvivalentní uzávěru $K_b$.
+Pro každý uzel $K$ existuje číslo $n \in \N$ a copánek $b \in B_n$, že $K$ je ekvivalentní uzávěru $K_b$.
 :::
 
+Předchozí větu lze použít k definici nového invariantu, a to copánkového indexu. Tento index nám říká, kolik pramenů potřebujeme, abychom mohli dostat daný uzel jako uzávěr copánku s daným počtem pramenů.
+
 :::definice
-Pro daný uzel $K$ rozumíme *copánkovým indexem* $s(K)$ (anglicky *braid index*) nejmenší číslo $n$ takové, že existuje $b \in B_n$ tak, že $K$ je ekvivalentní uzávěru $K_b$.
+Pro daný uzel $K$ rozumíme *copánkovým indexem* $s(K)$ (anglicky *braid index*) nejmenší číslo $n$ takové, že existuje $b \in B_n$ tak, aby $K$ byl ekvivalentní uzávěru $K_b$.
 :::
 
 :::pozorovani
