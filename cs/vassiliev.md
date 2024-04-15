@@ -41,6 +41,26 @@ statement-kinds:
         style: remark
         label: Poznámka
         counter: none
+    vetac:
+        style: definition
+        label: Věta
+        counter: tvrzeni
+    faktc:
+        style: definition
+        label: Fakt
+        counter: tvrzeni
+    lemmac:
+        style: definition
+        label: Lemma
+        counter: tvrzeni
+    domnenkac:
+        style: definition
+        label: Domněnka
+        counter: tvrzeni
+    tvrzenic:
+        style: definition
+        label: Tvrzení
+        counter: tvrzeni
 ---
 # Barvení jako Vassilievův invariant
 
@@ -117,7 +137,8 @@ Buď $K$ uzel, pro který zafixujeme jedno křížení, a $z \in \Z$. Pak *twist
 
 ![Twist uzlu](../img/twist.pdf){#twist}
 
-:::{.veta #twistseq}
+:::{.vetac #twistseq}
+[@Trapp1994]
 Buď $\{ K_z : z \in \Z \}$ posloupnost twistů. Pokud je invariant $v: \mathcal{K} \rightarrow \C$ Vassilievův stupně nejvýše $m$, tak platí, že $v(K_z)$ tvoří polynom v $z$ stupně nejvýše $m$.
 :::
 
@@ -139,7 +160,8 @@ Copánkové číslo $s(K)$ je omezené na posloupnost twistů.
 Mějme uzel $K$ a jeho copánkový index $s(K)$. Pak si vezměme z věty \ref{alexander} copánek $b \in B_{s(K)}$ tak, že $K$ je ekvivalentní uzávěru $K_b$. Nyní si zafixujeme jedno křížení a budeme provádět twisty. Twisty zhora pak tedy dávají horní mez na copánkové číslo $K_z$. Zároveň platí, že $s(K) > 0$. Tedy $s(K)$ je omezené na posloupnost twistů.
 :::
 
-:::{.veta #omezeni}
+:::{.vetac #omezeni}
+[@eisermann1999number]
 Buď $s(K)$ copánkový index uzlu $K$. Pak pokud invariant $v: \mathcal{K} \rightarrow \mathbb{C}$ splňuje, že $|v(K)| \leq f(s(K))$ pro nějakou funkci $f: \mathbb{N} \rightarrow \mathbb{N}$ a pro všechny uzly $K \in \mathcal{K}$, pak $v$ není Vassilievův invariant, nebo je konstantní.
 :::
 

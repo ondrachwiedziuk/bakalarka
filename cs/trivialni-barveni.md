@@ -41,6 +41,26 @@ statement-kinds:
         style: remark
         label: Poznámka
         counter: none
+    vetac:
+        style: definition
+        label: Věta
+        counter: tvrzeni
+    faktc:
+        style: definition
+        label: Fakt
+        counter: tvrzeni
+    lemmac:
+        style: definition
+        label: Lemma
+        counter: tvrzeni
+    domnenkac:
+        style: definition
+        label: Domněnka
+        counter: tvrzeni
+    tvrzenic:
+        style: definition
+        label: Tvrzení
+        counter: tvrzeni
 ---
 # Trivální barvení
 

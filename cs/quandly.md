@@ -41,6 +41,26 @@ statement-kinds:
         style: remark
         label: Poznámka
         counter: none
+    vetac:
+        style: definition
+        label: Věta
+        counter: tvrzeni
+    faktc:
+        style: definition
+        label: Fakt
+        counter: tvrzeni
+    lemmac:
+        style: definition
+        label: Lemma
+        counter: tvrzeni
+    domnenkac:
+        style: definition
+        label: Domněnka
+        counter: tvrzeni
+    tvrzenic:
+        style: definition
+        label: Tvrzení
+        counter: tvrzeni
 ---
 # Quandly
 
@@ -94,7 +114,7 @@ Nyní tyto pojmy využijeme, abychom definovali fundamentální quandle. Ten je 
 Mějme $K$ uzel, $D_K$ jeho diagram, pak *fundamentálním quandlem* $Q_K$ rozumíme volný quandle nad množinou oblouků $O(D_K)$ vyfaktorizovaný relacemi dané kříženími $C(D_K)$ takové, že pro každé křížení $(a, b, c) \in C(D_K)$ platí $a * b = c$.
 :::
 
-:::tvrzeni
+:::tvrzenic
 [@Joyce1982ACI].
 Fundamentální quandle $Q_K$ je úplným invariantem až na orientaci.
 :::
@@ -170,7 +190,7 @@ Mezi souvislé quandly patří např. foxův quandle $F$. Naopak, mezi nesouvisl
 
 Obecně neplatí, že působením $\Inn{Q}$ na $Q$ dostaneme souvislé quandly. Je to z toho důvodu, že působení $\Inn{Q}$ na jednu orbitu $Q'$ může být tranzitivní, ale z pohledu té orbity se jedná o působení $\Aut{Q'}$. A tedy může nastat, že $\Inn{Q'}$ není tranzitivní na $Q'$. Pro konečné quandly však platí, že se dají rekurzivně rozložit na souvislé podquandly.
 
-:::{.tvrzeni #rozklad}
+:::{.tvrzenic #rozklad}
 [@ehrman2006toward].
 Mějme quandle $Q$. Pak platí, že se dá jednoznačně rozložit na maximální souvislé podquandly $(Q_1, Q_2, \dots, Q_n)$.
 :::
@@ -187,7 +207,7 @@ Mějme quandle $Q$. Pak *rozkladem* quandle $Q$ rozumíme rozklad na souvislé p
 
 Nyní se podíváme, jak se chová souvislost při homomorfismech.
 
-:::{.lemma #hom}
+:::{.lemmac #hom}
 [@bonatto2018structure].
 Uvažujme quandly $Q$ a $W$, rozklad $Q$ jako ${Q_1, Q_2, \dots Q_n}$ a homomorfismus $\varphi: Q \rightarrow W$. Pak platí, že homomorfním obrazem $Q_i$ je souvislý podquandle $\varphi(Q_i) = W_i \preccurlyeq W$.
 :::
@@ -206,7 +226,7 @@ Tedy platí, že $\varphi(a)$ a $\varphi(b)$ jsou ve stejné komponentě.
 
 Speciálně, pokud je $Q$ souvislý quandle, tak jeho homomorfním obrazem je také souvislý quandle.
 
-:::{.lemma #sofun}
+:::{.lemmac #sofun}
 [@Joyce1982ACI].
 Mějme uzel $K$ a jeho fundamentální quandle $Q_K$. Pak platí, že $Q_K$ je souvislý quandle.
 :::
@@ -263,7 +283,8 @@ Jedná se o trochu robustnější definici rozkladu na souvislé komponenty, kte
 Technické lemma z [@bonatto2020quandles].
 :::
 
-:::{.tvrzeni #redbar}
+:::{.tvrzenic #redbar}
+[@bonatto2020quandles].
 Buď $Q$ konečný quandle. Pak jsou následující podmínky ekvivalentní:
 
 1) $Q$ je reduktivní.
