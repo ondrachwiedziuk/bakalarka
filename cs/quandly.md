@@ -73,11 +73,11 @@ Quandle vznikl jako algebraická struktura, která respektuje Reidemeisterovy po
 
 2) $\exists! x \in C: a * x = b$ (jednoznačné levé dělení, značíme $x = a *^{-1} b$);
 
-3) $a*(b*c) = (a*b)*(a*c)$ (levá samodistributivita).
+3) $a*(b*c) = (a*b)*(a*c)$ (levá sebedistributivita).
 :::
 
 :::priklad
-Příkladem quandle je například *triviální jednoprvkový quandle* $Q = (\{ a \}, *)$, kde $a * a = a$. Značme ho jako $T_1$. *Trivální quandle* nad $A$ definujeme tak, že vezmeme množinu $A$ a definujeme $a * b = b$ pro všechna $a, b \in A$. Takový quandle značíme $T_A$.
+Příkladem quandle je například *triviální jednoprvkový quandle* $Q = (\{ a \}, *)$, kde $a * a = a$. Značme ho jako $T_1$. *Triviální quandle* nad $A$ definujeme tak, že vezmeme množinu $A$ a definujeme $a * b = b$ pro všechna $a, b \in A$. Takový quandle značíme $T_A$.
 :::
 
 :::priklad
@@ -127,7 +127,7 @@ Mějme uzel $K$, jeho fundamentální quandle $Q_K$ a libovolný quandle $W$. Pa
 
 ![Barvení pomocí quandlu](../img/coloring.pdf)
 
-Jak takový invariant funguje, si ukážeme na příkladu *Foxova quandlu*. Začneme definicí tohoto quandlu. Originálně je Foxovo barvení definováno jako barvení oblouků jednou ze tří barev tak, aby na každém křížení byly měly všechny tři oblouky buď stejnou barvu, nebo navzájem různou. Nyní si reformulujme toto barvení jako homomorfismus z fundamentálního quandlu do Foxova quandlu. Foxův quandle $F$ definujeme následující tabulkou:
+Jak takový invariant funguje, si ukážeme na příkladu *Foxova quandlu*. Začneme definicí tohoto quandlu. Originálně je Foxovo barvení definováno jako barvení oblouků jednou ze tří barev tak, aby na každém křížení byly měly všechny tři oblouky buď stejnou barvu, nebo navzájem různou. Nyní reformulujme toto barvení jako homomorfismus z fundamentálního quandlu do Foxova quandlu. Foxův quandle $F$ definujeme následující tabulkou:
 
 \begin{table}[h!]
 \centering
@@ -185,7 +185,7 @@ Zafixujme si orbitu nějakou $W$. Tak platí, že $W$ je uzavřená na operaci $
 :::
 
 :::priklad
-Mezi souvislé quandly patří např. foxův quandle $F$. Naopak, mezi nesouvislé patří triviální quandly $T_n$, kde $n > 1$. Tyto quandly se rozpadnou na $n$ jednoprvkových podquandlů $T_1$, který je ale triviálně souvislý.
+Mezi souvislé quandly patří např. Foxův quandle $F$. Naopak, mezi nesouvislé patří triviální quandly $T_n$, kde $n > 1$. Tyto quandly se rozpadnou na $n$ jednoprvkových podquandlů $T_1$, který je ale triviálně souvislý.
 :::
 
 Obecně neplatí, že působením $\Inn{Q}$ na $Q$ dostaneme souvislé quandly. Je to z toho důvodu, že působení $\Inn{Q}$ na jednu orbitu $Q'$ může být tranzitivní, ale z pohledu té orbity se jedná o působení $\Aut{Q'}$. A tedy může nastat, že $\Inn{Q'}$ není tranzitivní na $Q'$. Pro konečné quandly však platí, že se dají rekurzivně rozložit na souvislé podquandly.
@@ -269,7 +269,8 @@ $$((\dots(a * c_1) \dots) * c_{n-1}) * c_n = ((\dots(b * c_1)\dots) * c_{n-1}) *
 Buď $Q$ quandle. Pak definujeme grupu $\text{Trans}_\alpha = \langle L_a L_b^{-1} : a\, \alpha\, b \rangle \trianglelefteq \Inn{Q}$. Tato grupa se nazývá *transvekční grupa* quandlu $Q$ podle relace ekvivalence $\alpha$.
 :::
 
-:::{.lemma #trans}
+:::{.lemmac #trans}
+[@hulpke2015connected].
 Buď $Q$ quandle. Pak jsou orbity působení $\Inn{Q}$ na $Q$ a transvekční grupy $\text{Trans}_{1_Q}$ na $Q$ shodné.
 :::
 
@@ -314,6 +315,7 @@ Jediný souvislý reduktivní quandle je $T_1$.
 
 :::proof
 Mějme souvislý reduktivní quandle $Q$. Jelikož je reduktivní, tak podle \ref{redbar} všechny komponenty rozkladu mají velikost $1$. Jenže zároveň je $Q$ souvislý. Tudíž se jedná o $T_1$.
+:::
 
 <!-- :::definice
 Buď $Q$ quandle. Pak *lokálně $n$-reduktivním* quandlem rozumíme takový quandle, že pro každé $a, b \in Q$ platí rovnost:

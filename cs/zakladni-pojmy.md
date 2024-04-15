@@ -68,7 +68,7 @@ Základním matematickým objektem, o\ kterém tato práce pojednává, je *uzel
 
 ![Divoký uzel](../img/wild_knot.pdf)
 
-Abychom se těmto uzlům vyhnuli, budeme používat definici [@Murasugi, p. 6], využívající místo spojitých křivek pouze polygonální křivky. Tedy uzlem rozumíme jednoduchou uzavřenpu lomenou čáru. Takovýmto uzlům se pak říká *krotké uzly* (v angličtině *tame knots*). Množinu všech takových uzlů značíme $\mathcal{K}$.
+Abychom se těmto uzlům vyhnuli, budeme používat definici [@Murasugi, p. 6], využívající místo spojitých křivek pouze polygonální křivky. Tedy uzlem rozumíme jednoduchou uzavřenou lomenou čáru. Takovýmto uzlům se pak říká *krotké uzly* (v angličtině *tame knots*). Množinu všech takových uzlů značíme $\mathcal{K}$.
 
 ![Trojlístek](../img/trefoil.pdf)
 

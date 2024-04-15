@@ -62,9 +62,9 @@ statement-kinds:
         label: Tvrzení
         counter: tvrzeni
 ---
-# Trivální barvení
+# Triviální barvení
 
-V předchozí kapitole jsme si ukázali, že homomorfním obrazem fundamentálního quandlu je souvislý quandle. Nyní naopak ukážeme, že pro každý netrivální souvislý quandle existuje takový uzel, který má netriviální obarvení. Na základě toho ukážeme, že quandle dává triviální obarvení pro všechny uzly, právě tehdy když je reduktivní.
+V předchozí kapitole jsme si ukázali, že homomorfním obrazem fundamentálního quandlu je souvislý quandle. Nyní naopak ukážeme, že pro každý netriviální souvislý quandle existuje takový uzel, který má netriviální obarvení. Na základě toho ukážeme, že quandle dává triviální obarvení pro všechny uzly, právě tehdy když je reduktivní.
 
 :::{.veta #stuha}
 Pro každý souvislý quandle $Q$, $|Q| > 1$ existuje takový uzel $K$, že $\Col{Q}{K} > |Q|$.
@@ -73,7 +73,7 @@ Pro každý souvislý quandle $Q$, $|Q| > 1$ existuje takový uzel $K$, že $\Co
 :::proof
 Pro důkaz této věty použijeme konstrukci, která se poprvé objevila v článku [@johnson1980homomorphs], a kterou si upravíme tak, aby řešila náš problém. Konstrukce je následující:
 
-Nejprve uvažujme orientovaný $m$-link, $m = |Q|$, takový, že každou komponentu obarvíme jiným prvkem z $Q$. Následně budeme postupně propojovat pomocí pásků tak dlouho, dokud nám nevznikne uzel. Na konci dostaneme uzel, který bude mít netriviální obarvení, jelikož každá komponenta bude obarvena jiným prvkem z $Q$ a toto obervení se v průběhu konstrukce zachovává. Z toho pak bude plynout, že $\Col{Q}{K} > |Q|$.
+Nejprve uvažujme orientovaný $m$-link, $m = |Q|$, takový, že každou komponentu obarvíme jiným prvkem z $Q$. Následně budeme postupně propojovat pomocí pásků tak dlouho, dokud nám nevznikne uzel. Na konci dostaneme uzel, který bude mít netriviální obarvení, jelikož každá komponenta bude obarvena jiným prvkem z $Q$ a toto obarvení se v průběhu konstrukce zachovává. Z toho pak bude plynout, že $\Col{Q}{K} > |Q|$.
 
 ![$m$-link](../img/link.pdf)
 
@@ -81,7 +81,7 @@ Mějme zadaný souvislý quandle $Q$. Jelikož je $Q$ souvislý, pak podle lemma
 
 $$x_1 *^{\varepsilon_1} (x_2 *^{\varepsilon_2} (\dots *^{\varepsilon_{n-1}} (x_n *^{\varepsilon_n} a)) \dots) = b,$$
 
-pro každé dva prvky $a, b \in Q$. Našim cílem bude postupně provádět levé stranslace $L_{x_1}^{\varepsilon_1}, L_{x_2}^{\varepsilon_2}, \dots, L_{x_n}^{\varepsilon_n}$ tak, abychom na konci mohli propojit dvě komponenty uzlu a získat tak link o $m - 1$ komponentách. Tento postup budeme opakovat tak dlouho, dokud nedostaneme uzel.
+pro každé dva prvky $a, b \in Q$. Našim cílem bude postupně provádět levé translace $L_{x_1}^{\varepsilon_1}, L_{x_2}^{\varepsilon_2}, \dots, L_{x_n}^{\varepsilon_n}$ tak, abychom na konci mohli propojit dvě komponenty uzlu a získat tak link o $m - 1$ komponentách. Tento postup budeme opakovat tak dlouho, dokud nedostaneme uzel.
 
 Začněme s komponentou obarvenou prvkem $a$. Z ní povedeme pásek. Pokud pásek bude křižovat s nějakou jinou komponentou, tak budeme postupovat podle jedné z následujících situací:
 
@@ -103,10 +103,10 @@ Počet komponent je konečný a jednou iterací algoritmu jsme snížili počet 
 :::
 
 :::priklad
-Nyní provedeme konstrukci pro foxův quandle $F$. Víme, že $2 * 1 = 3$ a $1 * 2 = 3$. Nejprve propojíme komponenty $1$ a $3$, následně připojíme zbývající komponentu $2$ a dostaneme stuhový uzel $R_F$ jako na obrázku \ref{ribfox}.
+Nyní provedeme konstrukci pro Foxův quandle $F$. Víme, že $2 * 1 = 3$ a $1 * 2 = 3$. Nejprve propojíme komponenty $1$ a $3$, následně připojíme zbývající komponentu $2$ a dostaneme stuhový uzel $R_F$ jako na obrázku \ref{ribfox}.
 :::
 
-![Stuhový uzel pro foxův quandle](../img/ribfox.pdf){#ribfox}
+![Stuhový uzel pro Foxův quandle](../img/ribfox.pdf){#ribfox}
 
 :::{.veta #valoun}
 Mějme konečný quandle $Q$. Pak platí jsou následující tvrzení ekvivalentní:

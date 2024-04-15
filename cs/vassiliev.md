@@ -121,7 +121,7 @@ Tato hodnota je jednoznačně určená, tudíž nám to dává způsob, jak defi
 
 $$v(K^\bullet) = \sum_{\varepsilon_1, \varepsilon_2, \dots, \varepsilon_n \in \{+,-\}} (-1)^{|\varepsilon|} v(K^{\varepsilon_1, \varepsilon_2, \dots, \varepsilon_n}),$$
 
-kde $|\varepsilon|$ značí počet záporných znamének v n-tici $(\varepsilon_1, \varepsilon_2, \dots, \varepsilon_n)$ a $K^{\varepsilon_1, \varepsilon_2, \dots, \varepsilon_n}$ značí uzly, které vzniknou nahrazením singulárních bodů křížením s orientací podle příslušného znaménka.
+kde $|\varepsilon|$ značí počet záporných znamének v $n$-tici $(\varepsilon_1, \varepsilon_2, \dots, \varepsilon_n)$ a $K^{\varepsilon_1, \varepsilon_2, \dots, \varepsilon_n}$ značí uzly, které vzniknou nahrazením singulárních bodů křížením s orientací podle příslušného znaménka.
 
 Myšlenka Vassiievových invariantů je, že tento vztah můžeme obrátit a říct, že definujeme invariant $v$ tak, aby od určitého počtu singulárních bodů byl nulový.
 
@@ -149,7 +149,7 @@ Pokud je invariant $v$ omezený na posloupnost twistů, tak je konstantní.
 :::
 
 :::proof
-Mějme invariant $v$ Vassilievova stupně nejvýše $m$. Podle věty \ref{twistseq} platí, že $v(K_z)$ tvoří polynom v $z$ stupně nejvýše $m$. Jelikož je $v$ také omezený, tak to znamená, že tento polynom je konstantní. Dále, jelikož je součástí posloupnosti twistů uzly $K_0 = K$ i $K_1$, kde dochází ke změně orientace křížení, tak $v(K) = v(K_0) = v(K_1) = v(K)$. Jelikož jsme schopní změnou orientace křížení dostat unknot, tak $v$ musí být nutně konstatní.
+Mějme invariant $v$ Vassilievova stupně nejvýše $m$. Podle věty \ref{twistseq} platí, že $v(K_z)$ tvoří polynom v $z$ stupně nejvýše $m$. Jelikož je $v$ také omezený, tak to znamená, že tento polynom je konstantní. Dále, jelikož je součástí posloupnosti twistů uzly $K_0 = K$ i $K_1$, kde dochází ke změně orientace křížení, tak $v(K) = v(K_0) = v(K_1) = v(K)$. Jelikož jsme schopní změnou orientace křížení dostat unknot, tak $v$ musí být nutně konstantní.
 :::
 
 :::{.lemma #braidlim}
@@ -157,7 +157,7 @@ Copánkové číslo $s(K)$ je omezené na posloupnost twistů.
 :::
 
 :::proof
-Mějme uzel $K$ a jeho copánkový index $s(K)$. Pak si vezměme z věty \ref{alexander} copánek $b \in B_{s(K)}$ tak, že $K$ je ekvivalentní uzávěru $K_b$. Nyní si zafixujeme jedno křížení a budeme provádět twisty. Twisty zhora pak tedy dávají horní mez na copánkové číslo $K_z$. Zároveň platí, že $s(K) > 0$. Tedy $s(K)$ je omezené na posloupnost twistů.
+Mějme uzel $K$ a jeho copánkový index $s(K)$. Pak si vezměme z věty \ref{alexander} copánek $b \in B_{s(K)}$ tak, že $K$ je ekvivalentní uzávěru $K_b$. Nyní si zafixujeme jedno křížení a budeme provádět twisty. Twisty shora pak tedy dávají horní mez na copánkové číslo $K_z$. Zároveň platí, že $s(K) > 0$. Tedy $s(K)$ je omezené na posloupnost twistů.
 :::
 
 :::{.vetac #omezeni}
@@ -175,7 +175,7 @@ Motivací je, že fundamentální quandle je úplný invariant, tedy plně chara
 
 ## Barvení uzlů
 
-Nyní využijeme znalosti z předchozí podkapitoly o copánkovém indexu. Zatímco v článku [@eisermann1999number] se autor zabývá grupovými homomorfismy, my jeho výsledek zobecníme na quandlové barvení. Abychom ukázali, že se jedná o obecnější výsledek, tak si všimněme, že foxovo barvení nelze dostat jako $\Conj{G}$ pro nějakou grupu $G$. Pokud ano, tak by grupa $G$ byla velikosti 3, jenže jediná grupa velikosti 3 je cyklická grupa $\Z_3$, která je abelovská. Jenže $\Conj{\Z_3}$ je trivialní quandle $T_{\Z_3}$, což není foxovo barvení. Tedy jsme získali silnější výsledek, než který je v původním článku.
+Nyní využijeme znalosti z předchozí podkapitoly o copánkovém indexu. Zatímco v článku [@eisermann1999number] se autor zabývá grupovými homomorfismy, my jeho výsledek zobecníme na quandlové barvení. Abychom ukázali, že se jedná o obecnější výsledek, tak si všimněme, že Foxovo barvení nelze dostat jako $\Conj{G}$ pro nějakou grupu $G$. Pokud ano, tak by grupa $G$ byla velikosti 3, jenže jediná grupa velikosti 3 je cyklická grupa $\Z_3$, která je abelovská. Jenže $\Conj{\Z_3}$ je triviální quandle $T_{\Z_3}$, což není Foxovo barvení. Tedy jsme získali silnější výsledek, než který je v původním článku.
 
 :::{.veta #kukurice}
 Pro každý quandle $Q$ platí, že počet obarvení $\Col{Q}{K}$ není Vassilievův invariant, nebo je konstantní.
@@ -211,10 +211,10 @@ V článku [@eisermann1999number] bylo obdobným způsobem dokázáno, že grupa
 
 ## Barvení linků
 
-Obdobnou charakterizaci můžeme získat i pro linky. Ovšem, v tomto případě bude vše jednodušší. Nejprve se sluší říct, že musíme změnit definici barvení linku, jelikož pokud budeme uvažovat $m$-link, tak platí, že počet obarvení quandlem $Q$ je rovno $|Q|^m$. Tedy $\Col{Q}{K}$ je konstatní pouze pro $T_1$. To můžeme opravit tím, že nebudeme započítávat obarvení, která jsou triviální. Tedy $\Col[+]{Q}{L} = \Col{Q}{L} - |Q|^l$, kde $l$ je počet komponent linku $L$.
+Obdobnou charakterizaci můžeme získat i pro linky. Ovšem, v tomto případě bude vše jednodušší. Nejprve se sluší říct, že musíme změnit definici barvení linku, jelikož pokud budeme uvažovat $m$-link, tak platí, že počet obarvení quandlem $Q$ je rovno $|Q|^m$. Tedy $\Col{Q}{K}$ je konstantní pouze pro $T_1$. To můžeme opravit tím, že nebudeme započítávat obarvení, která jsou triviální. Tedy $\Col[+]{Q}{L} = \Col{Q}{L} - |Q|^l$, kde $l$ je počet komponent linku $L$.
 
 :::veta
-Uvažujme quandle $Q$ a link $L$ s alespoň 2 komponentami. Pak platí, že $\Col[+]{Q}{L}$ není Vassilievův invariant, nebo je konstantní. Navíc $\Col[+]{Q}{L}$ je konstantní, právě tehdy když $Q$ je trivialní quandle.
+Uvažujme quandle $Q$ a link $L$ s alespoň 2 komponentami. Pak platí, že $\Col[+]{Q}{L}$ není Vassilievův invariant, nebo je konstantní. Navíc $\Col[+]{Q}{L}$ je konstantní, právě tehdy když $Q$ je triviální quandle.
 :::
 
 :::proof
@@ -226,5 +226,5 @@ Naopak Uvažujme quandle $Q$, který není triviální. Pak jako $L$ označíme 
 
 Pro $L$ platí, že $\Col[+]{Q}{L} = 0$ pro všechny quandly $Q$.
 
-Jelikož $Q$ není trivialní, tak existuje dvojice prvků $a, b \in Q$ taková, že $a \neq b$ a $a * b \neq b$. Pokud obarvíme $H$ tak, že první komponentu obarvíme prvkem $a$ a druhou komponentu obarvíme prvkem $b$, tak ze vztahu výše plyne, že $H$ nejde touto dvojicí prvků obarvit. Tedy $\Col[+]{Q}{L} < 0$ a $\Col{Q}{L}$ není konstantní.
+Jelikož $Q$ není triviální, tak existuje dvojice prvků $a, b \in Q$ taková, že $a \neq b$ a $a * b \neq b$. Pokud obarvíme $H$ tak, že první komponentu obarvíme prvkem $a$ a druhou komponentu obarvíme prvkem $b$, tak ze vztahu výše plyne, že $H$ nejde touto dvojicí prvků obarvit. Tedy $\Col[+]{Q}{L} < 0$ a $\Col{Q}{L}$ není konstantní.
 :::
