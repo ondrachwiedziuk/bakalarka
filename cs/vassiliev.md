@@ -62,11 +62,11 @@ statement-kinds:
         label: Tvrzení
         counter: tvrzeni
 ---
-# Barvení jako Vassilievův invariant
+# Quandlové barvení jako Vassilievův invariant
 
 V této kapitole ukážu další charakterizaci reduktivních quandlů a to pomocí Vassilievových invariantů. Nejprve je ovšem uvést několik základních výsledků z teorie copánkových grup, které následně budou aplikovány v příslušném důkazu.
 
-## Copánky
+## Copánkový index
 
 Copánkovou grupu jako první zavedl Emil Artin v roce 1925. Copánky se skládají z $n$ pramenů, které jsou upevněny k horní a dolní desce a mohou se mezi sebou křížit ve smyslu Reidemeistrových pohybů 2 a 3. My si zavedeme copánkovou grupu pomocí prezentace.
 
@@ -86,7 +86,7 @@ Pokud vezmeme nějaký copánek $b \in B_n$, pak můžeme udělat tzv. *uzávěr
 
 Jedna z nejznámějších vět z teorie uzlů je Alexanderova věta, která říká, že každý uzel lze získat jako uzávěr nějakého copánku.
 
-:::{.veta #alexander}
+:::{.tvrzeni #alexander}
 (Alexanderova věta).
 Pro každý uzel $K$ existuje číslo $n \in \N$ a copánek $b \in B_n$, že $K$ je ekvivalentní uzávěru $K_b$.
 :::
@@ -94,14 +94,14 @@ Pro každý uzel $K$ existuje číslo $n \in \N$ a copánek $b \in B_n$, že $K$
 Předchozí větu lze použít k definici nového invariantu, a to copánkového indexu. Tento index nám říká, kolik pramenů potřebujeme, abychom mohli dostat daný uzel jako uzávěr copánku s daným počtem pramenů.
 
 :::definice
-Pro daný uzel $K$ rozumíme *copánkovým indexem* $s(K)$ (anglicky *braid index*) nejmenší číslo $n$ takové, že existuje $b \in B_n$ tak, aby $K$ byl ekvivalentní uzávěru $K_b$.
+Pro daný uzel $K$ rozumíme *copánkovým indexem* $br(K)$ (anglicky *braid index*) nejmenší číslo $n$ takové, že existuje $b \in B_n$ tak, aby $K$ byl ekvivalentní uzávěru $K_b$.
 :::
 
 :::pozorovani
-Copánkové číslo $s(K)$ je invariant.
+Copánkové číslo $br(K)$ je invariant.
 :::
 
-## Vassilievův invariant
+## Vassilievovy invarianty
 
 Myšlenka Vassilievových invariantů stojí na zobecnění uzlů na tzv. singulární uzly. Tyto uzly se vyznačují tím, že dovolujeme křivce, aby se protínala samu sebe. V této kapitole vycházíme z knížky [@chmutov2011introduction].
 
@@ -137,7 +137,7 @@ Buď $K$ uzel, pro který zafixujeme jedno křížení, a $z \in \Z$. Pak *twist
 
 ![Twist uzlu](../img/twist.pdf){#twist}
 
-:::{.vetac #twistseq}
+:::{.tvrzenic #twistseq}
 [@Trapp1994]
 Buď $\{ K_z : z \in \Z \}$ posloupnost twistů. Pokud je invariant $v: \mathcal{K} \rightarrow \C$ Vassilievův stupně nejvýše $m$, tak platí, že $v(K_z)$ tvoří polynom v $z$ stupně nejvýše $m$.
 :::
@@ -153,16 +153,16 @@ Mějme invariant $v$ Vassilievova stupně nejvýše $m$. Podle věty \ref{twists
 :::
 
 :::{.lemma #braidlim}
-Copánkové číslo $s(K)$ je omezené na posloupnost twistů.
+Copánkové číslo $br(K)$ je omezené na posloupnost twistů.
 :::
 
 :::proof
-Mějme uzel $K$ a jeho copánkový index $s(K)$. Pak si vezměme z věty \ref{alexander} copánek $b \in B_{s(K)}$ tak, že $K$ je ekvivalentní uzávěru $K_b$. Nyní si zafixujeme jedno křížení a budeme provádět twisty. Twisty shora pak tedy dávají horní mez na copánkové číslo $K_z$. Zároveň platí, že $s(K) > 0$. Tedy $s(K)$ je omezené na posloupnost twistů.
+Mějme uzel $K$ a jeho copánkový index $br(K)$. Pak si vezměme z věty \ref{alexander} copánek $b \in B_{br(K)}$ tak, že $K$ je ekvivalentní uzávěru $K_b$. Nyní si zafixujeme jedno křížení a budeme provádět twisty. Twisty shora pak tedy dávají horní mez na copánkové číslo $K_z$. Zároveň platí, že $br(K) > 0$. Tedy $br(K)$ je omezené na posloupnost twistů.
 :::
 
-:::{.vetac #omezeni}
+:::{.tvrzenic #omezeni}
 [@eisermann1999number]
-Buď $s(K)$ copánkový index uzlu $K$. Pak pokud invariant $v: \mathcal{K} \rightarrow \mathbb{C}$ splňuje, že $|v(K)| \leq f(s(K))$ pro nějakou funkci $f: \mathbb{N} \rightarrow \mathbb{N}$ a pro všechny uzly $K \in \mathcal{K}$, pak $v$ není Vassilievův invariant, nebo je konstantní.
+Buď $br(K)$ copánkový index uzlu $K$. Pak pokud invariant $v: \mathcal{K} \rightarrow \mathbb{C}$ splňuje, že $|v(K)| \leq f(br(K))$ pro nějakou funkci $f: \mathbb{N} \rightarrow \mathbb{N}$ a pro všechny uzly $K \in \mathcal{K}$, pak $v$ není Vassilievův invariant, nebo je konstantní.
 :::
 
 :::proof
@@ -173,7 +173,7 @@ Jelikož je copánkový index omezený na posloupnost twistů dle lemmatu \ref{b
 
 Motivací je, že fundamentální quandle je úplný invariant, tedy plně charakterizuje uzel. Zároveň platí, že grupové homomorfismy mají svojí representaci i jako quandleové homomorfismy, ovšem ne každý quandleový homomorfismus má svojí reprezentaci jako grupový homomorfismus. Tedy pokud bychom dokázali obdobný výsledek pro quandleové homomorfismy, tak bychom mohli získat silnější výsledek, než který je v původním článku. -->
 
-## Barvení uzlů
+## Charakterizace Vassiievových barvení uzlů
 
 Nyní využijeme znalosti z předchozí podkapitoly o copánkovém indexu. Zatímco v článku [@eisermann1999number] se autor zabývá grupovými homomorfismy, my jeho výsledek zobecníme na quandlové barvení. Abychom ukázali, že se jedná o obecnější výsledek, tak si všimněme, že Foxovo barvení nelze dostat jako $\Conj{G}$ pro nějakou grupu $G$. Pokud ano, tak by grupa $G$ byla velikosti 3, jenže jediná grupa velikosti 3 je cyklická grupa $\Z_3$, která je abelovská. Jenže $\Conj{\Z_3}$ je triviální quandle $T_{\Z_3}$, což není Foxovo barvení. Tedy jsme získali silnější výsledek, než který je v původním článku.
 
@@ -182,37 +182,43 @@ Pro každý quandle $Q$ platí, že počet obarvení $\Col{Q}{K}$ není Vassilie
 :::
 
 :::proof
-Mějme fixně zadaný quandle $Q$. Uvažujme libovolný uzel $K$ a copánek $b \in B_{s(K)}$, kde $K_b \cong K$. Pak platí, že máme-li konkrétní obarvení $f \in \text{Hom}(Q_K, Q)$, tak je jednoznačně určeno obarvením konců provázků v copánkové reprezentaci. Tedy platí, že $\Col{Q}{K}$ dokážeme omezit tak, že každému konci přiřadíme nějaký prvek z $Q$. Tedy
+Mějme fixně zadaný quandle $Q$. Uvažujme libovolný uzel $K$ a copánek $b \in B_{br(K)}$, kde $K_b \cong K$. Pak platí, že máme-li konkrétní obarvení $f \in \text{Hom}(Q_K, Q)$, tak je jednoznačně určeno obarvením konců provázků v copánkové reprezentaci. Tedy platí, že $\Col{Q}{K}$ dokážeme omezit tak, že každému konci přiřadíme nějaký prvek z $Q$. Tedy
 
-$$\Col{Q}{K} \leq |Q|^{s(K)}.$$
+$$\Col{Q}{K} \leq |Q|^{br(K)}.$$
 
 Použitím věty \ref{omezeni} dostáváme, že $\Col{Q}{K}$ není Vassilievův invariant, nebo je konstantní.
 :::
 
+Z toho už nám plyne důkaz ekvivalence druhého a třetího tvrzení z věty \ref{hlavni}.
+
 :::dusledek
-Mějme quandle $Q$. Pak platí, že není Vassilievův invariant, právě tehdy když není reduktivní.
+Mějme quandle $Q$. Pak platí, že je Vassilievův invariant, právě tehdy když je reduktivní.
 :::
 
 :::proof
 Z věty \ref{valoun} plyne, že $\Col{Q}{K}$ je konstantní, právě tehdy když $Q$ je reduktivní. Z věty \ref{kukurice} plyne, že $\Col{Q}{K}$ je Vassilievův invariant, právě tehdy když je konstantní. Tedy obě tvrzení jsou ekvivalentní.
 :::
 
-## Barvení linků
+## Charakterizace Vassiievových barvení linků
 
-Obdobnou charakterizaci můžeme získat i pro linky. Ovšem, v tomto případě bude vše jednodušší. Nejprve se sluší říct, že musíme změnit definici barvení linku, jelikož pokud budeme uvažovat $m$-link, tak platí, že počet obarvení quandlem $Q$ je rovno $|Q|^m$. Tedy $\Col{Q}{K}$ je konstantní pouze pro $T_1$. To můžeme opravit tím, že nebudeme započítávat obarvení, která jsou triviální. Tedy $\Col[+]{Q}{L} = \Col{Q}{L} - |Q|^l$, kde $l$ je počet komponent linku $L$.
+Obdobnou charakterizaci můžeme získat i pro linky. Ovšem, v tomto případě bude vše jednodušší. Ukáže se totiž, že aby bylo $\Col{Q}{L}$ Vassilievův invariant, tak musí být $Q$ triviální quandle. Nejprve je ovšem třeba dodefinovat $\Col{Q}{L}$ pro linky. Zatímco u uzlů jsme odebírali pouze $|Q|$ triviálních obarvení, tak u linků musíme zahrnout existenci více komponent. Jako obdobu unknotu budeme brát $m$-link jako na obrázku \ref{link}.
+
+:::definice
+Buď $Q$ quandle a $L$ link. Definujeme $\Col{Q}{L} = |\Hom(Q_L, Q)| - |Q|^{c(L)}$, kde $c(L)$ značí počet komponent linku $L$.
+:::
 
 :::veta
-Uvažujme quandle $Q$ a link $L$ s alespoň 2 komponentami. Pak platí, že $\Col[+]{Q}{L}$ není Vassilievův invariant, nebo je konstantní. Navíc $\Col[+]{Q}{L}$ je konstantní, právě tehdy když $Q$ je triviální quandle.
+Uvažujme quandle $Q$ a link $L$ s alespoň 2 komponentami. Pak platí, že $\Col{Q}{L}$ není Vassilievův invariant, nebo je konstantní. Navíc $\Col{Q}{L}$ je konstantní, právě tehdy když $Q$ je triviální quandle.
 :::
 
 :::proof
 První část je jen variací věty \ref{kukurice}, kde místo uzlu uvažujeme link.
 
-Dále, pokud je $Q$ triviální quandle, tak jak platí, že $\Col[+]{Q}{L} = 0$ pro všechny linky $L$. Tedy $\Col{Q}{L}$ je konstantní.
+Dále, pokud je $Q$ triviální quandle, tak jak platí, že $\Col{Q}{L} = 0$ pro všechny linky $L$. Tedy $\Col{Q}{L}$ je konstantní.
 
 Naopak Uvažujme quandle $Q$, který není triviální. Pak jako $L$ označíme $2$-link a jako $H$ hopf link. 
 
-Pro $L$ platí, že $\Col[+]{Q}{L} = 0$ pro všechny quandly $Q$.
+Pro $L$ platí, že $\Col{Q}{L} = 0$ pro všechny quandly $Q$.
 
-Jelikož $Q$ není triviální, tak existuje dvojice prvků $a, b \in Q$ taková, že $a \neq b$ a $a * b \neq b$. Pokud obarvíme $H$ tak, že první komponentu obarvíme prvkem $a$ a druhou komponentu obarvíme prvkem $b$, tak ze vztahu výše plyne, že $H$ nejde touto dvojicí prvků obarvit. Tedy $\Col[+]{Q}{L} < 0$ a $\Col{Q}{L}$ není konstantní.
+Jelikož $Q$ není triviální, tak existuje dvojice prvků $a, b \in Q$ taková, že $a \neq b$ a $a * b \neq b$. Pokud obarvíme $H$ tak, že první komponentu obarvíme prvkem $a$ a druhou komponentu obarvíme prvkem $b$, tak ze vztahu výše plyne, že $H$ nejde touto dvojicí prvků obarvit. Tedy $\Col{Q}{L} < 0$ a $\Col{Q}{L}$ není konstantní.
 :::

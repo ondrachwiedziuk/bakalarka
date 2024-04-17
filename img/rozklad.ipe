@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70218" creator="Ipe 7.2.28">
-<info created="D:20240227190655" modified="D:20240417123100"/>
+<info created="D:20240417144306" modified="D:20240417145201"/>
+<preamble>\usepackage{amsmath}</preamble>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
 <path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
@@ -313,28 +314,171 @@ h
 <page>
 <layer name="alpha"/>
 <view layers="alpha" active="alpha"/>
-<path layer="alpha" stroke="black" dash="dashed" pen="fat">
-90.5097 0 0 90.5097 256 704 e
-</path>
-<path stroke="black" pen="fat">
-320 768 m
-192 640 l
-</path>
-<path stroke="black" pen="fat">
-320 640 m
-261.657 698.343 l
-261.657 698.343 l
-</path>
-<path stroke="black" pen="fat" arrow="normal/normal">
-250.343 709.657 m
+<path layer="alpha" matrix="1 0 0 1 -32 0" stroke="black" pen="fat">
+48 768 m
 192 768 l
 </path>
-<path stroke="black" pen="fat" arrow="normal/normal">
-192 640 m
-320 768 l
+<path matrix="1 0 0 1 -32 0" stroke="black" pen="fat">
+64 784 m
+64 640 l
 </path>
-<text transformations="translations" pos="296 672" stroke="black" type="label" width="25.354" height="10.756" depth="3.59" valign="baseline" size="Large" style="math">f(b)</text>
-<text matrix="1 0 0 1 0 8" transformations="translations" pos="296 728" stroke="black" type="label" width="26.755" height="10.756" depth="3.59" valign="baseline" size="Large" style="math">f(a)</text>
-<text matrix="1 0 0 1 -16 8" transformations="translations" pos="232 744" stroke="black" type="label" width="65.658" height="10.756" depth="3.59" valign="baseline" size="Large" style="math">f(a) * f(b)</text>
+<path matrix="1 0 0 1 160 0" stroke="black" pen="fat">
+48 768 m
+192 768 l
+</path>
+<path matrix="1 0 0 1 160 0" stroke="black" pen="fat">
+64 784 m
+64 640 l
+</path>
+<path matrix="1 0 0 1 352 0" stroke="black" pen="fat">
+48 768 m
+192 768 l
+</path>
+<path matrix="1 0 0 1 352 0" stroke="black" pen="fat">
+64 784 m
+64 640 l
+</path>
+<path matrix="1 0 0 1 -32 0" stroke="black" pen="heavier">
+72 760 m
+184 760 l
+184 648 l
+72 648 l
+h
+</path>
+<path stroke="black" pen="heavier">
+232 760 m
+248 760 l
+248 744 l
+232 744 l
+h
+</path>
+<path stroke="black" pen="heavier">
+248 744 m
+280 744 l
+280 712 l
+248 712 l
+h
+</path>
+<path stroke="black" pen="heavier">
+280 712 m
+288 712 l
+288 704 l
+280 704 l
+h
+</path>
+<path stroke="black" pen="heavier">
+288 704 m
+320 704 l
+320 672 l
+288 672 l
+h
+</path>
+<path stroke="black" pen="heavier">
+320 672 m
+344 672 l
+344 648 l
+320 648 l
+h
+</path>
+<path stroke="black" pen="heavier">
+424 760 m
+432 760 l
+432 752 l
+424 752 l
+h
+</path>
+<path stroke="black" pen="heavier">
+432 752 m
+440 752 l
+440 744 l
+432 744 l
+h
+</path>
+<path stroke="black" pen="heavier">
+440 744 m
+448 744 l
+448 736 l
+440 736 l
+h
+</path>
+<path stroke="black" pen="heavier">
+448 736 m
+448 728 l
+456 728 l
+456 736 l
+h
+</path>
+<path stroke="black" pen="heavier">
+456 728 m
+456 720 l
+464 720 l
+464 728 l
+h
+</path>
+<path stroke="black" pen="heavier">
+464 720 m
+464 712 l
+472 712 l
+472 720 l
+h
+</path>
+<path stroke="black" pen="heavier">
+472 712 m
+472 704 l
+480 704 l
+480 712 l
+h
+</path>
+<path stroke="black" pen="heavier">
+480 704 m
+480 696 l
+488 696 l
+488 704 l
+h
+</path>
+<path stroke="black" pen="heavier">
+488 696 m
+488 688 l
+496 688 l
+496 696 l
+h
+</path>
+<path stroke="black" pen="heavier">
+496 688 m
+496 680 l
+504 680 l
+504 688 l
+h
+</path>
+<path stroke="black" pen="heavier">
+504 680 m
+504 672 l
+512 672 l
+512 680 l
+h
+</path>
+<path stroke="black" pen="heavier">
+512 672 m
+512 664 l
+520 664 l
+520 672 l
+h
+</path>
+<path stroke="black" pen="heavier">
+520 664 m
+520 656 l
+528 656 l
+528 664 l
+h
+</path>
+<path stroke="black" pen="heavier">
+528 656 m
+528 648 l
+536 648 l
+536 656 l
+h
+</path>
+<text matrix="1 0 0 1 0 -8" transformations="translations" pos="168 704" stroke="black" type="label" width="33.095" height="30.649" depth="0" valign="baseline" size="Huge" style="math">\xrightarrow{\mathcal{O}}</text>
+<text transformations="translations" pos="360 696" stroke="black" type="label" width="33.095" height="30.649" depth="0" valign="baseline" size="Huge" style="math">\xrightarrow{\mathcal{O}}</text>
 </page>
 </ipe>

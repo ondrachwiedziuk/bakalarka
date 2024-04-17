@@ -91,7 +91,7 @@ Buď $Q$ konečný quandle. Pak jsou následující tvrzení ekvivalentní:
 
 Výsledek je zajímavý především z hlediska toho, že zatímco $(1)$ a $(3)$ jsou tvrzení související především s teorií uzlů, tvrzení $(2)$ je čistě algebraické, které vychází spíše z teorie komutátorů pro quandly a s barvením uzlů nemá na první pohled nic společného. Dále pak $(1) \implies (3)$ je zřejmá implikace, tak $(3) \implies (1)$ využívá jako prostředníka tvrzení $(2)$.
 
-V první kapitole jsou definovány základní pojmy z teorie uzlů a quandlů. Ve druhé kapitole se rozvine teorie kolem reduktivity quandlů a ukážeme $(1) \iff (2)$. Ve třetí kapitole se zaměříme na Vassilievovy invarianty a ukážeme $(2) \iff (3)$. Také je zde dokázáno obdobné tvrzení pro linky, kde je barvení pomocí quandlů Vassilievův invariant právě tehdy, když je quandle triviální. 
+V první kapitole jsou definovány základní pojmy z teorie uzlů a quandlů. Ve druhé kapitole definujeme reduktivitu a ukážeme $(1) \iff (2)$. Ve třetí kapitole se zaměříme na Vassilievovy invarianty a ukážeme $(2) \iff (3)$. Také je zde dokázáno obdobné tvrzení pro linky, kde je barvení pomocí quandlů Vassilievův invariant právě tehdy, když je quandle triviální. 
 
 <!-- V této práci se zaměřím na charakterizaci quandlů, které dávají triviální obarvení pro všechny uzly.
 V první kapitole jsou definovány základní pojmy z teorie uzlů. Jedná se o víceméně neformální úvod do problematiky uzlů a sám o sobě neobsahuje žádné nové výsledky.
