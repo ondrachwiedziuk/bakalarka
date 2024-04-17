@@ -3,8 +3,64 @@ documentclass: report
 statement-kinds:
     definice:
         style: definition
+        label: Definice
+        counter: self
     tvrzeni:
         style: definition
+        label: Tvrzení
+        counter: self
+    pozorovani:
+        style: definition
+        label: Pozorování
+        counter: none
+    priklad:
+        style: definition
+        label: Příklad
+        counter: none
+    lemma:
+        style: definition
+        label: Lemma
+        counter: tvrzeni
+    domnenka:
+        style: definition
+        label: Domněnka
+        counter: tvrzeni
+    dusledek:
+        style: definition
+        label: Důsledek
+        counter: tvrzeni
+    veta:
+        style: definition
+        label: Věta
+        counter: tvrzeni
+    fakt:
+        style: definition
+        label: Fakt
+        counter: tvrzeni
+    pozn:
+        style: remark
+        label: Poznámka
+        counter: none
+    vetac:
+        style: definition
+        label: Věta
+        counter: tvrzeni
+    faktc:
+        style: definition
+        label: Fakt
+        counter: tvrzeni
+    lemmac:
+        style: definition
+        label: Lemma
+        counter: tvrzeni
+    domnenkac:
+        style: definition
+        label: Domněnka
+        counter: tvrzeni
+    tvrzenic:
+        style: definition
+        label: Tvrzení
+        counter: tvrzeni
 ---
 # Úvod {-}
 
@@ -17,10 +73,30 @@ Základní technikou rozlišování uzlů je hledání invariantů. Mezi nejzná
 
 Quandle je algebraická struktura, která vznikla přesně pro účely rozlišování uzlů. Takzvaný fundamentální quandle dokonce jednoznačně určuje uzly až na orientaci a překlopení, což dokázal D. Joyce v roce 1982. Bohužel, výpočet fundamentálního quandle je příliš složitý pro praktické použití. Jako zjednodušení se počítá počet homomorfismů do konečného quandlu. Tomu pak říkáme barvení pomocí quandlu.
 
-V této práci se zaměřím na charakterizaci quandlů, které dávají triviální obarvení pro všechny uzly.
+<!-- Odsud dál to chce přepsat, abych vypíchl hlavní větu. -->
+
+#### Charakterizace quandlů s triviálním barvením {-}
+
+V této práci se zaměříme na charakterizaci quandlů, které dávají triviální obarvení pro všechny uzly. Hlavním výsledkem je následující věta:
+
+:::{.veta #hlavni}
+Buď $Q$ konečný quandle. Pak jsou následující tvrzení ekvivalentní:
+
+1) $\Col{Q}{K} = 0$ pro všechny uzly $K \in \mathcal{K}$.
+
+2) $Q$ je reduktivní.
+
+3) $\Col{Q}{K}$ je Vassilievův invariant.
+:::
+
+Výsledek je zajímavý především z hlediska toho, že zatímco $(1)$ a $(3)$ jsou tvrzení související především s teorií uzlů, tvrzení $(2)$ je čistě algebraické, které vychází spíše z teorie komutátorů pro quandly a s barvením uzlů nemá na první pohled nic společného. Dále pak $(1) \implies (3)$ je zřejmá implikace, tak $(3) \implies (1)$ využívá jako prostředníka tvrzení $(2)$.
+
+V první kapitole jsou definovány základní pojmy z teorie uzlů a quandlů. Ve druhé kapitole se rozvine teorie kolem reduktivity quandlů a ukážeme $(1) \iff (2)$. Ve třetí kapitole se zaměříme na Vassilievovy invarianty a ukážeme $(2) \iff (3)$. Také je zde dokázáno obdobné tvrzení pro linky, kde je barvení pomocí quandlů Vassilievův invariant právě tehdy, když je quandle triviální. 
+
+<!-- V této práci se zaměřím na charakterizaci quandlů, které dávají triviální obarvení pro všechny uzly.
 V první kapitole jsou definovány základní pojmy z teorie uzlů. Jedná se o víceméně neformální úvod do problematiky uzlů a sám o sobě neobsahuje žádné nové výsledky.
 Ve druhé kapitole se budu věnovat quandlům a jejich vlastnostem. Zaměřím se především na spojitost a dokážu pár základních tvrzení o rozkladu quandlu na spojité komponenty.
 Ve třetí kapitole zavedu pojem reduktivnosti quandlu a ukážu, že barvení quandlem je pro všechny uzly triviální, právě tehdy když je quandle reduktivní.
-Na závěr ve čtvrté kapitole se zaměřím na koncept Vassilievových invariantů a dokážu, že barvení pomocí quandlů je Vassilievův invariant právě tehdy, když je quandle reduktivní. Také rozvinu výsledek z uzlů na linky a ukážu, že barvení pomocí quandlů je Vassilievův invariant pro linky, právě tehdy když je quandle triviální.
+Na závěr ve čtvrté kapitole se zaměřím na koncept Vassilievových invariantů a dokážu, že barvení pomocí quandlů je Vassilievův invariant právě tehdy, když je quandle reduktivní. Také rozvinu výsledek z uzlů na linky a ukážu, že barvení pomocí quandlů je Vassilievův invariant pro linky, právě tehdy když je quandle triviální. -->
 
-Ve své práci vycházím především ze tří článků: \cite{eisermann1999number}, \cite{johnson1980homomorphs} a \cite{bonatto2020quandles}. Využívám podobné důkazové techniky, abych dosáhl svých výsledků.
+Tato práce vychází především ze tří článků: \cite{johnson1980homomorphs}, \cite{eisermann1999number} a \cite{bonatto2020quandles}. Využijeme podobné důkazové techniky, abychom dosáhli výše uvedeného výsledku.

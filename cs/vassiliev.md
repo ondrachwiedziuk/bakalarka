@@ -197,18 +197,6 @@ Mějme quandle $Q$. Pak platí, že není Vassilievův invariant, právě tehdy 
 Z věty \ref{valoun} plyne, že $\Col{Q}{K}$ je konstantní, právě tehdy když $Q$ je reduktivní. Z věty \ref{kukurice} plyne, že $\Col{Q}{K}$ je Vassilievův invariant, právě tehdy když je konstantní. Tedy obě tvrzení jsou ekvivalentní.
 :::
 
-:::dusledek
-Mějme grupu $G$. Pak platí, že následující tvrzení jsou ekvivalentní:
-
-1) $G$ je nilpotentní;
-
-2) quandle $\Conj{G}$ je reduktivní.
-:::
-
-:::proof
-V článku [@eisermann1999number] bylo obdobným způsobem dokázáno, že grupa $G$ je nilpotentní, právě tehdy když počet homomorfismů z fundamentální grupy uzlu do $G$ je konstantní. Naopak z věty \ref{valoun} plyne, že quandle $\Conj{G}$ je reduktivní, právě tehdy když počet obarvení uzlu quandlem $\Conj{G}$ je konstantní. Z toho plyne ekvivalence pro obě tvrzení.
-:::
-
 ## Barvení linků
 
 Obdobnou charakterizaci můžeme získat i pro linky. Ovšem, v tomto případě bude vše jednodušší. Nejprve se sluší říct, že musíme změnit definici barvení linku, jelikož pokud budeme uvažovat $m$-link, tak platí, že počet obarvení quandlem $Q$ je rovno $|Q|^m$. Tedy $\Col{Q}{K}$ je konstantní pouze pro $T_1$. To můžeme opravit tím, že nebudeme započítávat obarvení, která jsou triviální. Tedy $\Col[+]{Q}{L} = \Col{Q}{L} - |Q|^l$, kde $l$ je počet komponent linku $L$.
