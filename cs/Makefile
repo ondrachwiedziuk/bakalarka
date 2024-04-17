@@ -2,7 +2,9 @@ export TEXINPUTS=../tex//:
 
 MARKDOWN_FILES := $(wildcard *.md)
 
-all: $(MARKDOWN_FILES:.md=.tex) svoc.pdf clean
+all: $(MARKDOWN_FILES:.md=.tex) prace.pdf clean
+
+svoc: $(MARKDOWN_FILES:.md=.tex) svoc.pdf clean
 
 %.tex: %.md
 	pandoc -L statement.lua --natbib --citeproc $< -o $@
