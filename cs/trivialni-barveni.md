@@ -223,7 +223,7 @@ Nyní provedeme konstrukci pro Foxův quandle $F$. Víme, že $2 * 1 = 3$ a $1 *
 
 ## Barvení pomocí reduktivních quandlů
 
-Nyní už přistoupíme k samotnému důkazu ekvivalence prvních svou tvrzení z věty \ref{hlavni}.
+Nyní už přistoupíme k samotnému důkazu $(1) \iff (3)$ z věty \ref{hlavni}.
 
 :::{.veta #valoun}
 Mějme konečný quandle $Q$. Pak platí jsou následující tvrzení ekvivalentní:
