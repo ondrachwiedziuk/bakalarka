@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70218" creator="Ipe 7.2.28">
-<info created="D:20240227180022" modified="D:20240227215341"/>
+<info created="D:20240227215111" modified="D:20240508140838"/>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
 <path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
@@ -313,256 +313,90 @@ h
 <page>
 <layer name="alpha"/>
 <view layers="alpha" active="alpha"/>
-<use layer="alpha" name="mark/disk(sx)" pos="128 736" size="large" stroke="black"/>
-<use name="mark/disk(sx)" pos="128 704" size="large" stroke="black"/>
-<use name="mark/disk(sx)" pos="128 672" size="large" stroke="black"/>
-<use name="mark/disk(sx)" pos="128 640" size="large" stroke="black"/>
-<use name="mark/disk(sx)" pos="128 608" size="large" stroke="black"/>
-<use matrix="1 0 0 1 320 0" name="mark/disk(sx)" pos="128 736" size="large" stroke="black"/>
-<use matrix="1 0 0 1 320 0" name="mark/disk(sx)" pos="128 704" size="large" stroke="black"/>
-<use matrix="1 0 0 1 320 0" name="mark/disk(sx)" pos="128 672" size="large" stroke="black"/>
-<use matrix="1 0 0 1 320 0" name="mark/disk(sx)" pos="128 640" size="large" stroke="black"/>
-<use matrix="1 0 0 1 320 0" name="mark/disk(sx)" pos="128 608" size="large" stroke="black"/>
-<path stroke="black" pen="fat">
-128 736 m
-160 736 l
-</path>
-<path stroke="black" pen="fat">
-128 704 m
-160 704 l
-</path>
-<path stroke="black" pen="fat">
-128 672 m
-160 672 l
-</path>
-<path stroke="black" pen="fat">
-128 640 m
-160 640 l
-</path>
-<path stroke="black" pen="fat">
-128 608 m
-160 608 l
-</path>
-<path stroke="black" pen="fat">
-160 736 m
-192 704 l
-</path>
-<path stroke="black" pen="fat">
-160 672 m
-192 672 l
-</path>
-<path stroke="black" pen="fat">
-160 640 m
-192 640 l
-</path>
-<path stroke="black" pen="fat">
-160 608 m
-192 608 l
-</path>
-<path stroke="black" pen="fat">
-224 640 m
-192 608 l
-</path>
-<path stroke="black" pen="fat">
-192 672 m
-224 672 l
-</path>
-<path stroke="black" pen="fat">
+<use layer="alpha" matrix="-0.00373132 0.999993 -0.999993 -0.00373132 1017.07 378.718" name="mark/disk(sx)" pos="192 768" size="large" stroke="black"/>
+<use matrix="-0.00373132 0.999993 -0.999993 -0.00373132 1017.07 378.718" name="mark/disk(sx)" pos="192 736" size="large" stroke="black"/>
+<use matrix="-0.00373132 0.999993 -0.999993 -0.00373132 1017.07 378.718" name="mark/disk(sx)" pos="192 704" size="large" stroke="black"/>
+<use matrix="-0.00373132 0.999993 -0.999993 -0.00373132 1016.35 570.717" name="mark/disk(sx)" pos="192 768" size="large" stroke="black"/>
+<use matrix="-0.00373132 0.999993 -0.999993 -0.00373132 1016.35 570.717" name="mark/disk(sx)" pos="192 736" size="large" stroke="black"/>
+<use matrix="-0.00373132 0.999993 -0.999993 -0.00373132 1016.35 570.717" name="mark/disk(sx)" pos="192 704" size="large" stroke="black"/>
+<path matrix="-0.00373132 0.999993 -0.999993 -0.00373132 1017.07 378.718" stroke="black" pen="fat">
 192 736 m
 224 736 l
 </path>
-<path stroke="black" pen="fat">
+<path matrix="-0.00373132 0.999993 -0.999993 -0.00373132 1017.07 378.718" stroke="black" pen="fat">
 192 704 m
-224 704 l
-</path>
-<path stroke="black" pen="fat">
-224 672 m
-256 704 l
-</path>
-<path stroke="black" pen="fat">
-224 736 m
-256 736 l
-</path>
-<path stroke="black" pen="fat">
-224 640 m
-256 640 l
-</path>
-<path stroke="black" pen="fat">
-224 608 m
-256 608 l
-</path>
-<path stroke="black" pen="fat">
-256 736 m
+288 704 l
 288 704 l
 </path>
-<path stroke="black" pen="fat">
-288 736 m
-320 736 l
-</path>
-<path stroke="black" pen="fat">
-288 704 m
-320 704 l
-</path>
-<path stroke="black" pen="fat">
-256 640 m
-288 640 l
-</path>
-<path stroke="black" pen="fat">
-256 608 m
-288 608 l
-</path>
-<path stroke="black" pen="fat">
-256 672 m
-288 672 l
-</path>
-<path stroke="black" pen="fat">
-320 640 m
-288 672 l
-</path>
-<path stroke="black" pen="fat">
-288 608 m
-320 608 l
-</path>
-<path stroke="black" pen="fat">
-320 640 m
-352 640 l
-</path>
-<path stroke="black" pen="fat">
-320 672 m
-352 672 l
-</path>
-<path stroke="black" pen="fat">
-320 608 m
-352 608 l
-</path>
-<path stroke="black" pen="fat">
-320 736 m
-352 704 l
-</path>
-<path stroke="black" pen="fat">
+<path matrix="-0.00373132 0.999993 -0.999993 -0.00373132 1017.07 378.718" stroke="black" pen="fat">
 352 736 m
 384 736 l
 </path>
-<path stroke="black" pen="fat">
-352 704 m
-384 704 l
+<path matrix="-0.00373132 0.999993 -0.999993 -0.00373132 1017.07 378.718" stroke="black" pen="fat">
+352 736 m
+320 768 l
 </path>
-<path stroke="black" pen="fat">
-352 608 m
-384 640 l
+<path matrix="-0.00373132 0.999993 -0.999993 -0.00373132 1017.07 378.718" stroke="black" pen="fat">
+224 736 m
+237.172 749.172 l
 </path>
-<path stroke="black" pen="fat">
-352 672 m
-384 672 l
+<path matrix="-0.00373132 0.999993 -0.999993 -0.00373132 1017.07 378.718" stroke="black" pen="fat">
+242.828 754.828 m
+256 768 l
 </path>
-<path stroke="black" pen="fat">
-384 736 m
-416 736 l
+<path matrix="-0.00373132 0.999993 -0.999993 -0.00373132 1017.07 378.718" stroke="black" pen="fat">
+288 704 m
+301.172 717.172 l
 </path>
-<path stroke="black" pen="fat">
-384 672 m
-416 704 l
+<path matrix="-0.00373132 0.999993 -0.999993 -0.00373132 1017.07 378.718" stroke="black" pen="fat">
+306.828 722.828 m
+320 736 l
 </path>
-<path stroke="black" pen="fat">
-416 672 m
-448 672 l
+<path matrix="-0.00373132 0.999993 -0.999993 -0.00373132 1017.07 378.718" stroke="black" pen="fat">
+320 736 m
+333.172 749.172 l
 </path>
-<path stroke="black" pen="fat">
-416 704 m
-448 704 l
+<path matrix="-0.00373132 0.999993 -0.999993 -0.00373132 1017.07 378.718" stroke="black" pen="fat">
+338.828 754.828 m
+352 768 l
 </path>
-<path stroke="black" pen="fat">
-416 736 m
-448 736 l
+<path matrix="-0.00373132 0.999993 -0.999993 -0.00373132 1017.07 378.718" stroke="black" pen="fat">
+352 768 m
+384 768 l
 </path>
-<path stroke="black" pen="fat">
-448 640 m
-416 640 l
-</path>
-<path stroke="black" pen="fat">
-448 608 m
-416 608 l
-</path>
-<path stroke="black" pen="fat">
-384 608 m
-416 608 l
-</path>
-<path stroke="black" pen="fat">
-384 640 m
-416 640 l
-</path>
-<path stroke="black" pen="fat">
-192 736 m
-178.828 722.828 l
-178.828 722.828 l
-</path>
-<path stroke="black" pen="fat">
-173.172 717.172 m
-160 704 l
-</path>
-<path stroke="black" pen="fat">
-274.828 722.828 m
+<path matrix="-0.00373132 0.999993 -0.999993 -0.00373132 1017.07 378.718" stroke="black" pen="fat">
+384 704 m
+320 704 l
 288 736 l
 </path>
-<path stroke="black" pen="fat">
-269.172 717.172 m
-256 704 l
+<path matrix="-0.00373132 0.999993 -0.999993 -0.00373132 1017.07 378.718" stroke="black" pen="fat">
+192 768 m
+224 768 l
+256 736 l
 </path>
-<path stroke="black" pen="fat">
-256 672 m
-242.828 685.172 l
+<path matrix="-0.00373132 0.999993 -0.999993 -0.00373132 1017.07 378.718" stroke="black" pen="fat">
+320 768 m
+288 768 l
 </path>
-<path stroke="black" pen="fat">
-237.172 690.828 m
-224 704 l
+<path matrix="-0.00373132 0.999993 -0.999993 -0.00373132 1017.07 378.718" stroke="black" pen="fat">
+256 768 m
+288 736 l
 </path>
-<path stroke="black" pen="fat">
-224 608 m
-210.828 621.172 l
+<path matrix="-0.00373132 0.999993 -0.999993 -0.00373132 1017.07 378.718" stroke="black" pen="fat">
+288 768 m
+274.828 754.828 l
 </path>
-<path stroke="black" pen="fat">
-205.172 626.828 m
-192 640 l
+<path matrix="-0.00373132 0.999993 -0.999993 -0.00373132 1017.07 378.718" stroke="black" pen="fat">
+269.172 749.172 m
+256 736 l
 </path>
-<path stroke="black" pen="fat">
-288 640 m
-301.172 653.172 l
+<path matrix="-0.00373132 0.999993 -0.999993 -0.00373132 1017.07 378.718" stroke="black" dash="dotted" pen="fat">
+192 784 m
+192 688 l
 </path>
-<path stroke="black" pen="fat">
-306.828 658.828 m
-320 672 l
-</path>
-<path stroke="black" pen="fat">
-320 704 m
-333.172 717.172 l
-</path>
-<path stroke="black" pen="fat">
-338.828 722.828 m
-352 736 l
-</path>
-<path stroke="black" pen="fat">
-416 672 m
-402.828 685.172 l
-</path>
-<path stroke="black" pen="fat">
-397.172 690.828 m
-384 704 l
-</path>
-<path stroke="black" pen="fat">
-384 608 m
-370.828 621.172 l
-</path>
-<path stroke="black" pen="fat">
-365.172 626.828 m
-352 640 l
-</path>
-<path stroke="black" dash="dotted" pen="fat">
-128 752 m
-128 592 l
-</path>
-<path stroke="black" dash="dotted" pen="fat">
-448 752 m
-448 592 l
+<path matrix="-0.00373132 0.999993 -0.999993 -0.00373132 1017.07 378.718" stroke="black" dash="dotted" pen="fat">
+384 784 m
+384 688 l
 </path>
 </page>
 </ipe>

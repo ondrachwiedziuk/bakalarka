@@ -24,6 +24,10 @@ svoc.pdf: svoc.tex $(wildcard *.tex) literatura.bib prace.xmpdata
 	pdflatex $<
 	pdflatex $<
 
+abstract%.pdf: abstract%.tex abstract%.xmpdata
+	pdflatex $<
+	pdflatex $<
+
 clean:
 	rm -f *.log *.dvi *.aux *.toc *.lof *.lot *.out *.bbl *.blg *.xmpi
 	rm -f $(MARKDOWN_FILES:.md=.tex)

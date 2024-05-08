@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70218" creator="Ipe 7.2.28">
-<info created="D:20240411101857" modified="D:20240411101857"/>
+<info created="D:20240411101857" modified="D:20240508143932"/>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
 <path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
@@ -366,5 +366,16 @@ h
 </path>
 <text matrix="1 0 0 1 0 16" transformations="translations" pos="128 704" stroke="black" type="label" width="49.361" height="7.581" depth="0" valign="baseline" size="huge" style="math">\iff</text>
 <text transformations="translations" pos="400 720" stroke="black" type="label" width="49.361" height="7.581" depth="0" valign="baseline" size="huge" style="math">\iff</text>
+<text matrix="1 0 0 1 -0.455166 -2.731" transformations="translations" pos="103.941 760.338" stroke="black" type="label" width="10.53" height="9.803" depth="0" valign="baseline" size="Large" style="math">A</text>
+<text transformations="translations" pos="104.851 687.057" stroke="black" type="label" width="11.395" height="9.803" depth="0" valign="baseline" size="Large" style="math">B</text>
+<text transformations="translations" pos="215.911 755.787" stroke="black" type="label" width="10.53" height="9.803" depth="0" valign="baseline" size="Large" style="math">A</text>
+<text matrix="1 0 0 1 -0.910332 5.46199" transformations="translations" pos="216.367 683.871" stroke="black" type="label" width="11.395" height="9.803" depth="0" valign="baseline" size="Large" style="math">B</text>
+<text transformations="translations" pos="216.367 717.553" stroke="black" type="label" width="11.08" height="9.803" depth="0" valign="baseline" size="Large" style="math">C</text>
+<text transformations="translations" pos="326.972 739.856" stroke="black" type="label" width="10.53" height="9.803" depth="0" valign="baseline" size="Large" style="math">A</text>
+<text matrix="1 0 0 1 -0.455166 -4.0965" transformations="translations" pos="327.427 695.705" stroke="black" type="label" width="11.395" height="9.803" depth="0" valign="baseline" size="Large" style="math">B</text>
+<text matrix="1 0 0 1 -3.18616 -0.455166" transformations="translations" pos="377.495 724.38" stroke="black" type="label" width="11.08" height="9.803" depth="0" valign="baseline" size="Large" style="math">C</text>
+<text transformations="translations" pos="485.711 740.766" stroke="black" type="label" width="10.53" height="9.803" depth="0" valign="baseline" size="Large" style="math">A</text>
+<text matrix="1 0 0 1 -2.27583 -0.910332" transformations="translations" pos="486.622 693.429" stroke="black" type="label" width="11.395" height="9.803" depth="0" valign="baseline" size="Large" style="math">B</text>
+<text matrix="1 0 0 1 -3.18616 -3.64133" transformations="translations" pos="537.6 728.022" stroke="black" type="label" width="11.08" height="9.803" depth="0" valign="baseline" size="Large" style="math">C</text>
 </page>
 </ipe>

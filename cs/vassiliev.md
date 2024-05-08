@@ -86,8 +86,8 @@ Pokud vezmeme nějaký copánek $b \in B_n$, pak můžeme udělat tzv. *uzávěr
 
 Jedna z nejznámějších vět z teorie uzlů je Alexanderova věta, která říká, že každý uzel lze získat jako uzávěr nějakého copánku.
 
-:::{.tvrzeni #alexander}
-(Alexanderova věta).
+:::{.tvrzenic #alexander}
+[@Alexander1923].
 Pro každý uzel $K$ existuje číslo $n \in \N$ a copánek $b \in B_n$, že $K$ je ekvivalentní uzávěru $K_b$.
 :::
 
@@ -103,10 +103,10 @@ Copánkové číslo $br(K)$ je invariant.
 
 ## Vassilievovy invarianty
 
-Myšlenka Vassilievových invariantů stojí na zobecnění uzlů na tzv. singulární uzly. Tyto uzly se vyznačují tím, že dovolujeme křivce, aby se protínala samu sebe. V této kapitole vycházíme z knížky [@chmutov2011introduction].
+Myšlenka Vassilievových invariantů stojí na zobecnění uzlů na tzv. singulární uzly. Tyto uzly se vyznačují tím, že dovolujeme křivce, aby protínala samu sebe. V této kapitole vycházíme z knížky [@chmutov2011introduction].
 
 :::definice
-*Singulárním bodem* rozumíme bod, kde se křivka protíná sama sebe právě 2 částmi křivky. *Singulárním uzlem* $K^\bullet$ rozumíme uzel, který obsahuje alespoň jeden singulární bod.
+*Singulárním bodem* rozumíme bod, kde křivka protíná sama sebe právě 2 částmi křivky. *Singulárním uzlem* $K^\bullet$ rozumíme uzel, který obsahuje alespoň jeden singulární bod.
 :::
 
 ![Singulární uzel s 1 singulárním bodem](../img/singular.pdf)
@@ -117,19 +117,19 @@ $$v(K^{\bullet}) = v(K^+) - v(K^-).$$
 
 ![Vassilievova skein relace](../img/skein.pdf){#skein}
 
-Tato hodnota je jednoznačně určená, tudíž nám to dává způsob, jak definovat invariant pro singulární uzly. Pokud má uzel $K^\bullet$ singulární bodů více, tak se postupujeme induktivně, očíslujeme jednotlivé singulární body a dostaneme tak *úplnou rezoluci*:
+Tato hodnota je jednoznačně určená, tudíž nám dává způsob, jak definovat invariant pro singulární uzly. Pokud má uzel $K^\bullet$ singulární bodů více, tak postupujeme induktivně, očíslujeme jednotlivé singulární body a dostaneme tak *úplnou rezoluci*:
 
 $$v(K^\bullet) = \sum_{\varepsilon_1, \varepsilon_2, \dots, \varepsilon_n \in \{+,-\}} (-1)^{|\varepsilon|} v(K^{\varepsilon_1, \varepsilon_2, \dots, \varepsilon_n}),$$
 
 kde $|\varepsilon|$ značí počet záporných znamének v $n$-tici $(\varepsilon_1, \varepsilon_2, \dots, \varepsilon_n)$ a $K^{\varepsilon_1, \varepsilon_2, \dots, \varepsilon_n}$ značí uzly, které vzniknou nahrazením singulárních bodů křížením s orientací podle příslušného znaménka.
 
-Myšlenka Vassiievových invariantů je, že tento vztah můžeme obrátit a říct, že definujeme invariant $v$ tak, aby od určitého počtu singulárních bodů byl nulový.
+Myšlenka Vassilievových invariantů je, že tento vztah můžeme obrátit a říct, že definujeme invariant $v$ tak, aby od určitého počtu singulárních bodů byl nulový.
 
 :::definice
 Invariant $v$ se nazývá *Vassilievův*, nebo také *konečného typu* stupně $\leq m$, pokud platí, že pro každý singulární uzel $K^\bullet$ s počtem protnutí $> m$ platí $v(K^\bullet) = 0$. Řekneme, že je stupně $m$, pokud je stupně $\leq m$, ale není stupně $\leq m-1$.
 :::
 
-Spousta známých invariantů jsou Vassilievovy invarianty, nebo se dají na něj převést. Ovšem existují příklady invariantů, které nejsou Vassilievovy. Mezi ně, jak si ukážeme, nepatří třeba copánkový index. Důkaz provedeme pomocí sekvence tzv. *twistů* zmíněných v článcích [@Trapp1994] a [@Dean1994].
+Spousta známých invariantů jsou Vassilievovy invarianty, nebo se na ně dají převést. Ovšem existují příklady invariantů, které nejsou Vassilievovy. Jeden takový je třeba copánkový index. Důkaz provedeme pomocí sekvence tzv. *twistů* zmíněných v článcích [@Trapp1994] a [@Dean1994].
 
 :::definice
 Buď $K$ uzel, pro který zafixujeme jedno křížení, a $z \in \Z$. Pak *twist* $K_z$ je uzel, který vznikne z $K$ tak, že lokálně nahradíme zafixované křížení křížením s $z$ závity jako na obrázku \ref{twist}.
@@ -139,7 +139,7 @@ Buď $K$ uzel, pro který zafixujeme jedno křížení, a $z \in \Z$. Pak *twist
 
 :::{.tvrzenic #twistseq}
 [@Trapp1994]
-Buď $\{ K_z : z \in \Z \}$ posloupnost twistů. Pokud je invariant $v: \mathcal{K} \rightarrow \C$ Vassilievův stupně nejvýše $m$, tak platí, že $v(K_z)$ tvoří polynom v $z$ stupně nejvýše $m$.
+Buď $\{ K_z : z \in \Z \}$ posloupnost twistů. Pokud je invariant $v: \mathcal{K} \rightarrow \C$ Vassilievův stupně nejvýše $m$, tak platí, že $v(K_z)$ je polynom v $z$ stupně nejvýše $m$.
 :::
 
 Nyní využijeme pár lemmat z článku [@eisermann1999number], které nám pomohou ukázat, že copánkový index není Vassilievův invariant.
@@ -173,7 +173,7 @@ Jelikož je copánkový index omezený na posloupnost twistů dle lemmatu \ref{b
 
 Motivací je, že fundamentální quandle je úplný invariant, tedy plně charakterizuje uzel. Zároveň platí, že grupové homomorfismy mají svojí representaci i jako quandleové homomorfismy, ovšem ne každý quandleový homomorfismus má svojí reprezentaci jako grupový homomorfismus. Tedy pokud bychom dokázali obdobný výsledek pro quandleové homomorfismy, tak bychom mohli získat silnější výsledek, než který je v původním článku. -->
 
-## Charakterizace Vassiievových barvení uzlů
+## Charakterizace Vassilievových barvení uzlů
 
 Nyní využijeme znalosti z předchozí podkapitoly o copánkovém indexu. Zatímco v článku [@eisermann1999number] se autor zabývá grupovými homomorfismy, my jeho výsledek zobecníme na quandlové barvení. Abychom ukázali, že se jedná o obecnější výsledek, tak si všimněme, že Foxovo barvení nelze dostat jako $\Conj{G}$ pro nějakou grupu $G$. Pokud ano, tak by grupa $G$ byla velikosti 3, jenže jediná grupa velikosti 3 je cyklická grupa $\Z_3$, která je abelovská. Jenže $\Conj{\Z_3}$ je triviální quandle $T_{\Z_3}$, což není Foxovo barvení. Tedy jsme získali silnější výsledek, než který je v původním článku.
 
@@ -192,14 +192,14 @@ Použitím věty \ref{omezeni} dostáváme, že $\Col{Q}{K}$ není Vassilievův 
 Z toho už nám plyne důkaz ekvivalence druhého a třetího tvrzení z věty \ref{hlavni}.
 
 :::dusledek
-Mějme quandle $Q$. Pak platí, že je Vassilievův invariant, právě tehdy když je reduktivní.
+Mějme quandle $Q$. Pak platí, že je $\Col{Q}{K}$ Vassilievův invariant, právě tehdy, když $Q$ je reduktivní.
 :::
 
 :::proof
 Z věty \ref{valoun} plyne, že $\Col{Q}{K}$ je konstantní, právě tehdy když $Q$ je reduktivní. Z věty \ref{kukurice} plyne, že $\Col{Q}{K}$ je Vassilievův invariant, právě tehdy když je konstantní. Tedy obě tvrzení jsou ekvivalentní.
 :::
 
-## Charakterizace Vassiievových barvení linků
+## Charakterizace Vassilievových barvení linků
 
 Obdobnou charakterizaci můžeme získat i pro linky. Ovšem, v tomto případě bude vše jednodušší. Ukáže se totiž, že aby bylo $\Col{Q}{L}$ Vassilievův invariant, tak musí být $Q$ triviální quandle. Nejprve je ovšem třeba dodefinovat $\Col{Q}{L}$ pro linky. Zatímco u uzlů jsme odebírali pouze $|Q|$ triviálních obarvení, tak u linků musíme zahrnout existenci více komponent. Jako obdobu unknotu budeme brát $m$-link jako na obrázku \ref{link}.
 
@@ -211,12 +211,14 @@ Buď $Q$ quandle a $L$ link. Definujeme $\Col{Q}{L} = |\Hom(Q_L, Q)| - |Q|^{c(L)
 Uvažujme quandle $Q$ a link $L$ s alespoň 2 komponentami. Pak platí, že $\Col{Q}{L}$ není Vassilievův invariant, nebo je konstantní. Navíc $\Col{Q}{L}$ je konstantní, právě tehdy když $Q$ je triviální quandle.
 :::
 
+![2-link a hopf link](../img/hopf.pdf){#hopf}
+
 :::proof
 První část je jen variací věty \ref{kukurice}, kde místo uzlu uvažujeme link.
 
-Dále, pokud je $Q$ triviální quandle, tak jak platí, že $\Col{Q}{L} = 0$ pro všechny linky $L$. Tedy $\Col{Q}{L}$ je konstantní.
+Dále, pokud je $Q$ triviální quandle, tak platí, že $\Col{Q}{L} = 0$ pro všechny linky $L$. Tedy $\Col{Q}{L}$ je konstantní.
 
-Naopak Uvažujme quandle $Q$, který není triviální. Pak jako $L$ označíme $2$-link a jako $H$ hopf link. 
+Naopak uvažujme quandle $Q$, který není triviální. Pak jako $L$ označíme $2$-link a jako $H$ hopf link, jako na obrázku \ref{hopf}.
 
 Pro $L$ platí, že $\Col{Q}{L} = 0$ pro všechny quandly $Q$.
 

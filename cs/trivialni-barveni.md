@@ -77,7 +77,7 @@ $$((\dots(a * c_1) \dots) * c_{n-1}) * c_n = ((\dots(b * c_1)\dots) * c_{n-1}) *
 :::
 
 :::definice
-Buď $Q$ quandle. Pak definujeme grupu $\Dis{\alpha} = \langle L_a L_b^{-1} : a\: \alpha\: b \rangle \trianglelefteq \Inn{Q}$. Tato grupa se nazývá *pohybová grupa* quandlu $Q$ podle relace ekvivalence $\alpha$.
+Buď $Q$ quandle a $\alpha \in \Con{Q}$ relace na $Q$. Pak definujeme grupu $\Dis{\alpha} = \langle L_a L_b^{-1} : a\: \alpha\: b \rangle \trianglelefteq \Inn{Q}$. Tato grupa se nazývá *pohybová grupa* quandlu $Q$ podle relace ekvivalence $\alpha$.
 :::
 
 Obecně platí, že pohybové grupy $\Dis{\alpha} \trianglelefteq \Inn{Q}$. Toho využijeme při definici kongruence na quandlech.
@@ -89,7 +89,7 @@ Buď $Q$ quandle a $N \trianglelefteq \Inn{Q}$. Pak definujeme $\Orb{N} = \{ (a,
 Pokud budeme volit $N = \Dis{\alpha}$, kde $\alpha \in \Con{Q}$, tak můžeme dostat robustnější definici rozkladu na souvislé komponenty, která nám umožňuje s nimi lépe pracovat za pomocí kongruencí. První iterace vlastně odpovídá rozkladu na orbity pod působením $\Inn{Q}$.
 
 :::definice
-Buď $Q$ quandle. Pak definujeme $\Orb[0]{Q} = 1_Q$ Dále definujme $\Orb[n+1]{Q} = \Orb{\Dis{\Orb[n]{Q}}}$.
+Buď $Q$ quandle. Pak definujeme $\Orb[0]{Q} = 1_Q$. Dále definujme $\Orb[n+1]{Q} = \Orb{\Dis{\Orb[n]{Q}}}$.
 :::
 
 Cílem je ukázat, že pokud $\Orb[n]{Q} = 0_Q$, tedy se dostaneme do stavu jako na obrázku \ref{rozklado}, pak je $Q$ reduktivní a naopak. Abychom mohli využít síly výše definované konstrukce, potřebujeme nejprve technické lemma.
@@ -140,7 +140,7 @@ Dokážeme indukcí podle $n$:
 
 Případ $n = 1$ je triviální, protože se jedná o triviální quandly $T_m$ a tudíž $\Orb[1]{Q} = 0_Q$.
 
-Dále buď $Q$ $n+1$-reduktivní. Zadefinujme homomorfismus $L: Q \rightarrow Q$ tak, že $L: x \mapsto L_x$. Tím dostaneme faktorquandle definovaný jako $\faktor{Q}{\lambda} = L(Q)$, který je ale $n$-reduktivní. Podle indukčního předpokladu tedy platí, že $\Orb[n]{\faktor{Q}{\lambda}} = 0_{\faktor{Q}{\lambda}}$. Z lemmatu \ref{blivajz} pak plyne, že $\{[b]_{\lambda}: b\: \Orb[n]{Q}\: a\} = [[a]_{\lambda}]_{\Orb[n]{\faktor{Q}{\lambda}}} = \{[a]_{\lambda}\}$. Tedy pokud $b\: \Orb[n]{Q}\: a$, tak $[b]_{\lambda} = [a]_{\lambda}$ a tudíž i $b = a$. Tedy $\Orb[n]{Q} \subseteq \lambda$ a tudíž $\Dis{\Orb[n]{Q}} \leq \Dis{\lambda}$. Z toho plyne, že $\Orb[n+1]{Q} = \Orb{\Dis{\Orb[n]{Q}}} \subseteq \Orb{\Dis{\lambda}} = 0_Q$. Tedy $\Orb[n+1]{Q} = 0_Q$.
+Dále buď $Q$ $(n+1)$-reduktivní. Zadefinujme homomorfismus $L: Q \rightarrow Q$ tak, že $L: x \mapsto L_x$. Tím dostaneme faktorquandle definovaný jako $\faktor{Q}{\lambda} = L(Q)$, který je ale $n$-reduktivní. Podle indukčního předpokladu tedy platí, že $\Orb[n]{\faktor{Q}{\lambda}} = 0_{\faktor{Q}{\lambda}}$. Z lemmatu \ref{blivajz} pak plyne, že $\{[b]_{\lambda}: b\: \Orb[n]{Q}\: a\} = [[a]_{\lambda}]_{\Orb[n]{\faktor{Q}{\lambda}}} = \{[a]_{\lambda}\}$. Tedy pokud $b\: \Orb[n]{Q}\: a$, tak $[b]_{\lambda} = [a]_{\lambda}$ a tudíž i $b = a$. Tedy $\Orb[n]{Q} \subseteq \lambda$ a tudíž $\Dis{\Orb[n]{Q}} \leq \Dis{\lambda}$. Z toho plyne, že $\Orb[n+1]{Q} = \Orb{\Dis{\Orb[n]{Q}}} \subseteq \Orb{\Dis{\lambda}} = 0_Q$. Tedy $\Orb[n+1]{Q} = 0_Q$.
 
 $(2) \implies (1)$:
 
@@ -156,7 +156,7 @@ Z indukce víme, že $Q'$ je $n$-reduktivní. Jelikož $\Orb[n+1]{Q} = 0_Q$, pak
 
 $$((\dots(a * c_1) \dots) * c_{n-1}) * c_n \lambda = ((\dots(b * c_1)\dots) * c_{n-1}) * c_n \lambda.$$
 
-Z toho ale plyne, že $Q$ je $n+1$-reduktivní.
+Z toho ale plyne, že $Q$ je $(n+1)$-reduktivní.
 
 $(2) \implies (3)$:
 
@@ -172,7 +172,7 @@ Jediný souvislý reduktivní quandle je $T_1$.
 :::
 
 :::proof
-Mějme souvislý reduktivní quandle $Q$. Jelikož je reduktivní, tak podle \ref{redbar} všechny komponenty rozkladu mají velikost $1$. Jenže zároveň je $Q$ souvislý. Tudíž se jedná o $T_1$.
+Mějme souvislý reduktivní quandle $Q$. Jelikož je reduktivní, tak podle tvrzení \ref{redbar} všechny komponenty rozkladu mají velikost $1$. Jenže zároveň je $Q$ souvislý. Tudíž se jedná o $T_1$.
 :::
 
 ## Barvení pomocí souvislých quandlů
@@ -186,7 +186,7 @@ Pro každý souvislý quandle $Q$, $|Q| > 1$ existuje takový uzel $K$, že $\Co
 :::proof
 Pro důkaz této věty použijeme konstrukci, která se poprvé objevila v článku [@johnson1980homomorphs], a kterou si upravíme tak, aby řešila náš problém. Konstrukce je následující:
 
-Nejprve uvažujme orientovaný $m$-link, kde $m = |Q|$, viz obrázek \ref{link}. Každou komponentu obarvíme jiným prvkem z $Q$. Následně budeme postupně propojovat pomocí pásků tak dlouho, dokud nám nevznikne uzel. Na konci dostaneme uzel, který bude mít netriviální obarvení, jelikož každá komponenta bude obarvena jiným prvkem z $Q$ a toto obarvení se v průběhu konstrukce zachovává. Z toho pak bude plynout, že $\Col{Q}{K} > 0$.
+Nejprve uvažujme orientovaný $m$-link, kde $m = |Q|$, viz obrázek \ref{link}. Každou komponentu obarvíme jiným prvkem z $Q$. Následně budeme postupně propojovat jednotlivé komponenty pomocí pásků tak dlouho, dokud nám nevznikne jediná komponenta, která bude uzel. Na konci dostaneme uzel, který bude mít netriviální obarvení, jelikož každá komponenta bude obarvena jiným prvkem z $Q$ a toto obarvení se v průběhu konstrukce zachovává. Z toho pak bude plynout, že $\Col{Q}{K} > 0$.
 
 ![$m$-link](../img/link.pdf){#link}
 
@@ -238,10 +238,10 @@ Pokud je $Q$ souvislý a netriviální, pak podle věty \ref{stuha} zkonstruujem
 
 $(1) \implies (2)$:
 
-Tuto implikaci ukážeme obměnou. Předpokládáme, že $Q$ není reduktivní. $Q$ podle věty \ref{rozklad} rozkládá na komponenty $(Q_1, Q_2, \dots, Q_n)$. Jelikož $Q$ není reduktivní, pak z \ref{redbar} víme, že existuje komponenta $Q_i$ taková, že $|Q_i| > 1$. Označme si $Q_i$ jako $W$.
-Pak podle \ref{stuha} platí, že $\Col{W}{K} > 0$. Jelikož $W \preccurlyeq Q$, tak podle lemmatu \ref{suma} platí, že $\Col{Q}{K} \geq \Col{W}{K} > 0$. A tedy není konstantní.
+Tuto implikaci ukážeme obměnou. Předpokládáme, že $Q$ není reduktivní. $Q$ se podle věty \ref{rozklad} rozkládá na komponenty $(Q_1, Q_2, \dots, Q_n)$. Jelikož $Q$ není reduktivní, pak podle tvrzení \ref{redbar} víme, že existuje komponenta $Q_i$ taková, že $|Q_i| > 1$. Označme si $Q_i$ jako $W$.
+Podle věty \ref{stuha} platí, že $\Col{W}{K} > 0$. Jelikož $W \preccurlyeq Q$, tak podle lemmatu \ref{suma} platí, že $\Col{Q}{K} \geq \Col{W}{K} > 0$. A tedy není konstantní.
 
 $(2) \implies (1)$:
 
-Jestliže $Q$ je reduktivní, pak z věty \ref{redbar} platí, že všechny komponenty jsou izomorfní $T_1$. Z věty \ref{hom} plyne, že $\Col{Q}{K} = 0$, a tudíž $\Col{Q}{K}$ je konstantní pro všechny uzly $K$.
+Jestliže $Q$ je reduktivní, pak dle věty \ref{redbar} platí, že všechny komponenty jsou izomorfní $T_1$. Z věty \ref{hom} plyne, že $\Col{Q}{K} = 0$, a tudíž $\Col{Q}{K}$ je konstantní pro všechny uzly $K$.
 :::

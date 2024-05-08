@@ -4,7 +4,7 @@
 \Title{Barvicí invarianty uzlů}
 \Keywords{Reduktivní quandly \sep Vassilievovy invarianty \sep Barvení uzlů}
 \Subject{Uzly můžeme barvit různými konečnými quandly a zjišťovat, zda mají netriviální obarvení. Pokud ano, pak
-dokážeme říct, že daný uzel je rozvázatelný. V práci se však zaměříme na takové quandly, které vždy dávají
+dokážeme říct, že daný uzel není rozvázatelný. V práci se však zaměříme na takové quandly, které vždy dávají
 triviální barvení. Ukáže se totiž, že mají totiž zajímavé algebraické vlastnosti. V této práci dokážeme,
 že quandle dává pro každý uzel triviální barvení, právě tehdy když je quandle reduktivní, a to je právě tehdy,
 když je barvicí invariant Vassilievův. Podobnou charakterizaci provedeme pro linky. Tedy quandle dává triviální
